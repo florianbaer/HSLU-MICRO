@@ -1,2 +1,3 @@
 *.o
 FreeRTOS_TAD_logs/
+/.metadata/

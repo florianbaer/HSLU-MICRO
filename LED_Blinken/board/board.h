@@ -27,41 +27,35 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 /**
- * @file    Hello_World.c
- * @brief   Application entry point.
+ * @file    board.h
+ * @brief   Board initialization header file.
  */
-#include <stdio.h>
-#include "board.h"
-#include "peripherals.h"
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "MK22F51212.h"
-/* TODO: insert other include files here. */
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
 
+#ifndef _BOARD_H_
+#define _BOARD_H_
 
-/* TODO: insert other definitions and declarations here. */
-
-/*
- * @brief   Application entry point.
+/**
+ * @brief	The board name 
  */
-int main(void) {
-  	/* Init board hardware. */
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitBootPeripherals();
+#define BOARD_NAME "board"
 
-    printf("Hello World\n");
+#if defined(__cplusplus)
+extern "C" {
+#endif /* __cplusplus */
 
-    /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
-    /* Enter an infinite loop, just incrementing a counter. */
-    while(1) {
-        i++ ;
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
-    }
-    return 0 ;
+/**
+ * @brief 	Initialize board specific settings.
+ */
+void BOARD_InitDebugConsole(void);
+
+#if defined(__cplusplus)
 }
+#endif /* __cplusplus */
+
+#endif /* _BOARD_H_ */
+
+

@@ -810,3 +810,170 @@ Caused by: java.lang.Exception: Resource '/HelloWorld/device/system_MK22F51212.c
 
 !ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 11:47:07.641
 !MESSAGE Telnet session connected on port 2333->51570 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-03-07 11:56:43.626
+!MESSAGE Indexed 'LED_Blinken' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.nxp.swtools.utils.importer 4 0 2020-03-07 11:57:17.229
+!MESSAGE [SDK] Importer.parser failed: board/pin_mux.c
+
+!ENTRY com.nxp.swtools.periphs.model.yaml.converters 4 0 2020-03-07 11:57:17.250
+!MESSAGE No MCU was loaded from YAML
+
+!ENTRY com.nxp.swtools.sdkproject 4 0 2020-03-07 11:57:17.254
+!MESSAGE [SDK] Toolchain project import failed: No YAML found in `board/pin_mux.c`
+
+!ENTRY MCUXpresso IDE 4 -1 2020-03-07 12:14:21.645
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY MCUXpresso IDE 4 -1 2020-03-07 12:15:06.574
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY MCUXpresso IDE 4 -1 2020-03-07 12:15:25.397
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY MCUXpresso IDE 4 -1 2020-03-07 12:19:30.523
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY MCUXpresso IDE 4 -1 2020-03-07 12:20:24.587
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY MCUXpresso IDE 4 -1 2020-03-07 12:20:48.832
+!MESSAGE Unable to perform operation: project build failed!
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-03-07 12:21:33.987
+!MESSAGE SWO session connected on port 2334->58958 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:21:35.030
+!MESSAGE Telnet session connected on port 2335->39952 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2020-03-07 12:24:30.784
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:292)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2020-03-07 12:24:30.784
+!MESSAGE /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+!STACK 0
+java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:292)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-03-07 12:25:13.741
+!MESSAGE SWO session connected on port 2334->58968 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:25:14.717
+!MESSAGE Telnet session connected on port 2335->39962 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2020-03-07 12:41:37.138
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:292)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2020-03-07 12:41:37.139
+!MESSAGE /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+!STACK 0
+java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:292)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-03-07 12:42:48.614
+!MESSAGE SWO session connected on port 2334->59002 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:42:49.610
+!MESSAGE Telnet session connected on port 2335->39996 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-03-07 12:43:07.167
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@144ab910): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2020-03-07 12:43:07.167
+!MESSAGE Suspend operation timeout.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2020-03-07 12:43:49.763
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:292)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2020-03-07 12:43:49.763
+!MESSAGE /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+!STACK 0
+java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug/LED_Blinken.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:315)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:142)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:292)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:862)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-03-07 12:44:27.267
+!MESSAGE SWO session connected on port 2334->59012 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:44:28.312
+!MESSAGE Telnet session connected on port 2335->40006 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2020-03-07 12:45:52.345
+!MESSAGE There is already a running debug session for the launch configuration 'LED_Blinken JLink Debug'.
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-03-07 12:46:04.845
+!MESSAGE SWO session connected on port 2334->59020 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:46:05.879
+!MESSAGE Telnet session connected on port 2335->40014 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-03-07 12:46:51.031
+!MESSAGE SWO session connected on port 2334->59028 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:46:52.022
+!MESSAGE Telnet session connected on port 2335->40022 @ 127.0.0.1

@@ -58,3 +58,448 @@ arm-none-eabi-size "Hello_World.axf"; # arm-none-eabi-objcopy -v -O binary "Hell
 11:47:01 **** Incremental Build of configuration Debug for project Hello_World ****
 make -r -j2 all 
 make: Für das Ziel „all“ ist nichts zu tun.
+12:14:20 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../startup/startup_mk22f51212.c
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_mk22f51212.d" -MT"startup/startup_mk22f51212.o" -MT"startup/startup_mk22f51212.d" -o "startup/startup_mk22f51212.o" "../startup/startup_mk22f51212.c"
+../source/Delay.c:9:12: error: unknown type name 'unint32_t'
+ void Delay(unint32_t timeout){
+            ^~~~~~~~~
+source/subdir.mk:24: recipe for target 'source/Delay.o' failed
+make: *** [source/Delay.o] Error 1
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+Finished building: ../startup/startup_mk22f51212.c
+ 
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:15:05 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+../source/Delay.c:9:12: error: unknown type name 'uint32_t'
+ void Delay(uint32_t timeout){
+            ^~~~~~~~
+source/subdir.mk:24: recipe for target 'source/Delay.o' failed
+make: *** [source/Delay.o] Error 1
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+In file included from ../source/LED_Blinken.c:43:
+../source/Delay.h:14:12: error: unknown type name 'unint32_t'; did you mean 'uint32_t'?
+ void Delay(unint32_t timeout);
+            ^~~~~~~~~
+            uint32_t
+../source/LED_Blinken.c: In function 'main':
+../source/LED_Blinken.c:63:9: warning: implicit declaration of function 'Delay' [-Wimplicit-function-declaration]
+         Delay(500000U);
+         ^~~~~
+../source/LED_Blinken.c:64:9: warning: implicit declaration of function 'GPIO_PortToggle' [-Wimplicit-function-declaration]
+         GPIO_PortToggle(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN);
+         ^~~~~~~~~~~~~~~
+make: *** [source/LED_Blinken.o] Error 1
+source/subdir.mk:24: recipe for target 'source/LED_Blinken.o' failed
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:15:24 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+../source/Delay.c:9:12: error: unknown type name 'uint32_t'
+ void Delay(uint32_t timeout){
+            ^~~~~~~~
+source/subdir.mk:24: recipe for target 'source/Delay.o' failed
+make: *** [source/Delay.o] Error 1
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+../source/LED_Blinken.c: In function 'main':
+../source/LED_Blinken.c:64:9: warning: implicit declaration of function 'GPIO_PortToggle' [-Wimplicit-function-declaration]
+         GPIO_PortToggle(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN);
+         ^~~~~~~~~~~~~~~
+Finished building: ../source/LED_Blinken.c
+ 
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:19:29 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+../source/Delay.c:8:12: error: unknown type name 'uint32_t'
+ void Delay(uint32_t timeout){
+            ^~~~~~~~
+source/subdir.mk:24: recipe for target 'source/Delay.o' failed
+make: *** [source/Delay.o] Error 1
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+Finished building: ../source/LED_Blinken.c
+ 
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:20:23 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Building file: ../source/semihost_hardfault.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+Finished building: ../source/semihost_hardfault.c
+ 
+Building file: ../drivers/fsl_clock.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+../source/Delay.c: In function 'Delay':
+../source/Delay.c:11:3: warning: implicit declaration of function 'SDK_DelayAtLeastUs' [-Wimplicit-function-declaration]
+   SDK_DelayAtLeastUs(timeout, CLOCK_GetCoreSysClkFreq());
+   ^~~~~~~~~~~~~~~~~~
+../source/Delay.c:11:31: warning: implicit declaration of function 'CLOCK_GetCoreSysClkFreq' [-Wimplicit-function-declaration]
+   SDK_DelayAtLeastUs(timeout, CLOCK_GetCoreSysClkFreq());
+                               ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../source/Delay.c
+ 
+Building file: ../drivers/fsl_common.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
+Finished building: ../drivers/fsl_common.c
+ 
+Building file: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
+Finished building: ../drivers/fsl_clock.c
+ 
+Building file: ../device/system_MK22F51212.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_MK22F51212.d" -MT"device/system_MK22F51212.o" -MT"device/system_MK22F51212.d" -o "device/system_MK22F51212.o" "../device/system_MK22F51212.c"
+Finished building: ../drivers/fsl_gpio.c
+ 
+Building file: ../board/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
+Finished building: ../board/board.c
+ 
+Building file: ../board/clock_config.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
+Finished building: ../device/system_MK22F51212.c
+ 
+Building file: ../board/peripherals.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
+Finished building: ../board/peripherals.c
+ 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../board/clock_config.c
+ 
+../board/pin_mux.c:23:10: fatal error: fsl_port.h: No such file or directory
+ #include "fsl_port.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+board/subdir.mk:27: recipe for target 'board/pin_mux.o' failed
+make: *** [board/pin_mux.o] Error 1
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:20:48 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+Finished building: ../source/Delay.c
+ 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../source/LED_Blinken.c
+ 
+../board/pin_mux.c:23:10: fatal error: fsl_port.h: No such file or directory
+ #include "fsl_port.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+board/subdir.mk:27: recipe for target 'board/pin_mux.o' failed
+make: *** [board/pin_mux.o] Error 1
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:21:25 **** Clean-only build of configuration Debug for project LED_Blinken ****
+make -r -j2 clean 
+rm -rf  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./startup/startup_mk22f51212.d  ./source/Delay.d ./source/LED_Blinken.d ./source/semihost_hardfault.d  ./drivers/fsl_clock.d ./drivers/fsl_common.d ./drivers/fsl_gpio.d  ./device/system_MK22F51212.d  ./board/board.d ./board/clock_config.d ./board/peripherals.d ./board/pin_mux.d  LED_Blinken.axf
+ 
+12:21:25 **** Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../startup/startup_mk22f51212.c
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_mk22f51212.d" -MT"startup/startup_mk22f51212.o" -MT"startup/startup_mk22f51212.d" -o "startup/startup_mk22f51212.o" "../startup/startup_mk22f51212.c"
+Finished building: ../startup/startup_mk22f51212.c
+ 
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+Finished building: ../source/Delay.c
+ 
+Building file: ../source/semihost_hardfault.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+Finished building: ../source/semihost_hardfault.c
+ 
+Building file: ../drivers/fsl_clock.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+Finished building: ../source/LED_Blinken.c
+ 
+Building file: ../drivers/fsl_common.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
+Finished building: ../drivers/fsl_common.c
+ 
+Building file: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
+Finished building: ../drivers/fsl_clock.c
+ 
+Building file: ../device/system_MK22F51212.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_MK22F51212.d" -MT"device/system_MK22F51212.o" -MT"device/system_MK22F51212.d" -o "device/system_MK22F51212.o" "../device/system_MK22F51212.c"
+Finished building: ../drivers/fsl_gpio.c
+ 
+Building file: ../board/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
+Finished building: ../device/system_MK22F51212.c
+ 
+Building file: ../board/clock_config.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
+Finished building: ../board/board.c
+ 
+Building file: ../board/peripherals.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
+Finished building: ../board/peripherals.c
+ 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../board/clock_config.c
+ 
+Finished building: ../board/pin_mux.c
+ 
+Building target: LED_Blinken.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="LED_Blinken.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T LED_Blinken_Debug.ld -o "LED_Blinken.axf"  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       10236 B       512 KB      1.95%
+      SRAM_UPPER:        8408 B        64 KB     12.83%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: LED_Blinken.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_Blinken.axf" "LED_Blinken.bin" ; # checksum -p MK22FN512xxx12 -d "LED_Blinken.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10224	     12	   8396	  18632	   48c8	LED_Blinken.axf
+ 
+12:21:28 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+12:24:27 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+../source/LED_Blinken.c: In function 'main':
+../source/LED_Blinken.c:66:9: error: 'state' undeclared (first use in this function); did you mean 'system'?
+         state = GPIO_PinRead(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN) == 0;
+         ^~~~~
+         system
+../source/LED_Blinken.c:66:9: note: each undeclared identifier is reported only once for each function it appears in
+source/subdir.mk:24: recipe for target 'source/LED_Blinken.o' failed
+make: *** [source/LED_Blinken.o] Error 1
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:25:08 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+Finished building: ../source/LED_Blinken.c
+ 
+Building target: LED_Blinken.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="LED_Blinken.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T LED_Blinken_Debug.ld -o "LED_Blinken.axf"  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7056 B       512 KB      1.35%
+      SRAM_UPPER:        8408 B        64 KB     12.83%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: LED_Blinken.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_Blinken.axf" "LED_Blinken.bin" ; # checksum -p MK22FN512xxx12 -d "LED_Blinken.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7044	     12	   8396	  15452	   3c5c	LED_Blinken.axf
+ 
+12:41:34 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/GPIO_Toggler.c
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/GPIO_Toggler.d" -MT"source/GPIO_Toggler.o" -MT"source/GPIO_Toggler.d" -o "source/GPIO_Toggler.o" "../source/GPIO_Toggler.c"
+../source/GPIO_Toggler.c:9:21: error: unknown type name 'GPIO_Type'
+ void GPIO_PinToggle(GPIO_Type *base, uint32_t pin)
+                     ^~~~~~~~~
+../source/GPIO_Toggler.c:9:38: error: unknown type name 'uint32_t'
+ void GPIO_PinToggle(GPIO_Type *base, uint32_t pin)
+                                      ^~~~~~~~
+make: *** [source/GPIO_Toggler.o] Error 1
+source/subdir.mk:27: recipe for target 'source/GPIO_Toggler.o' failed
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+Finished building: ../source/Delay.c
+ 
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:42:42 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/GPIO_Toggler.c
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/GPIO_Toggler.d" -MT"source/GPIO_Toggler.o" -MT"source/GPIO_Toggler.d" -o "source/GPIO_Toggler.o" "../source/GPIO_Toggler.c"
+../source/LED_Blinken.c: In function 'main':
+../source/LED_Blinken.c:57:14: warning: unused variable 'state' [-Wunused-variable]
+     uint32_t state = 0;
+              ^~~~~
+Finished building: ../source/LED_Blinken.c
+ 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../source/GPIO_Toggler.c
+ 
+Finished building: ../board/pin_mux.c
+ 
+Building target: LED_Blinken.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="LED_Blinken.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T LED_Blinken_Debug.ld -o "LED_Blinken.axf"  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/GPIO_Toggler.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7412 B       512 KB      1.41%
+      SRAM_UPPER:        8408 B        64 KB     12.83%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: LED_Blinken.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_Blinken.axf" "LED_Blinken.bin" ; # checksum -p MK22FN512xxx12 -d "LED_Blinken.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7400	     12	   8396	  15808	   3dc0	LED_Blinken.axf
+ 
+12:43:47 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+../source/Delay.c: In function 'Delay':
+../source/Delay.c:13:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf((timeout*1000000f));
+  ^~~~~~
+../source/Delay.c:13:2: note: 'printf' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+../source/Delay.c:11:1:
++#include <stdio.h>
+ 
+../source/Delay.c:13:2:
+  printf((timeout*1000000f));
+  ^~~~~~
+../source/Delay.c:13:18: error: invalid suffix "f" on integer constant
+  printf((timeout*1000000f));
+                  ^~~~~~~~
+../source/Delay.c:14:40: error: invalid suffix "f" on integer constant
+  SDK_DelayAtLeastUs((uint32_t)(timeout*1000000f), CLOCK_GetCoreSysClkFreq());
+                                        ^~~~~~~~
+source/subdir.mk:27: recipe for target 'source/Delay.o' failed
+make: *** [source/Delay.o] Error 1
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+12:44:21 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+Finished building: ../source/Delay.c
+ 
+Building target: LED_Blinken.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="LED_Blinken.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T LED_Blinken_Debug.ld -o "LED_Blinken.axf"  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/GPIO_Toggler.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7420 B       512 KB      1.42%
+      SRAM_UPPER:        8408 B        64 KB     12.83%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: LED_Blinken.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_Blinken.axf" "LED_Blinken.bin" ; # checksum -p MK22FN512xxx12 -d "LED_Blinken.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7408	     12	   8396	  15816	   3dc8	LED_Blinken.axf
+ 
+12:45:58 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+../source/LED_Blinken.c: In function 'main':
+../source/LED_Blinken.c:57:14: warning: unused variable 'state' [-Wunused-variable]
+     uint32_t state = 0;
+              ^~~~~
+Finished building: ../source/LED_Blinken.c
+ 
+Building target: LED_Blinken.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="LED_Blinken.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T LED_Blinken_Debug.ld -o "LED_Blinken.axf"  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/GPIO_Toggler.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7548 B       512 KB      1.44%
+      SRAM_UPPER:        8408 B        64 KB     12.83%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: LED_Blinken.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_Blinken.axf" "LED_Blinken.bin" ; # checksum -p MK22FN512xxx12 -d "LED_Blinken.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7536	     12	   8396	  15944	   3e48	LED_Blinken.axf
+ 
+12:46:45 **** Incremental Build of configuration Debug for project LED_Blinken ****
+make -r -j2 all 
+Building file: ../source/LED_Blinken.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/board" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/source" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/drivers" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/device" -I"/home/hslu/MCUXpresso_workspace/LED_Blinken/CMSIS" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LED_Blinken.d" -MT"source/LED_Blinken.o" -MT"source/LED_Blinken.d" -o "source/LED_Blinken.o" "../source/LED_Blinken.c"
+../source/LED_Blinken.c: In function 'main':
+../source/LED_Blinken.c:57:14: warning: unused variable 'state' [-Wunused-variable]
+     uint32_t state = 0;
+              ^~~~~
+Finished building: ../source/LED_Blinken.c
+ 
+Building target: LED_Blinken.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="LED_Blinken.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T LED_Blinken_Debug.ld -o "LED_Blinken.axf"  ./startup/startup_mk22f51212.o  ./source/Delay.o ./source/GPIO_Toggler.o ./source/LED_Blinken.o ./source/semihost_hardfault.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7548 B       512 KB      1.44%
+      SRAM_UPPER:        8408 B        64 KB     12.83%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: LED_Blinken.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_Blinken.axf" "LED_Blinken.bin" ; # checksum -p MK22FN512xxx12 -d "LED_Blinken.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7536	     12	   8396	  15944	   3e48	LED_Blinken.axf
+ 

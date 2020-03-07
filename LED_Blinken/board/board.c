@@ -27,41 +27,20 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 /**
- * @file    Hello_World.c
- * @brief   Application entry point.
+ * @file    board.c
+ * @brief   Board initialization file.
  */
-#include <stdio.h>
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
+
+#include <stdint.h>
 #include "board.h"
-#include "peripherals.h"
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "MK22F51212.h"
-/* TODO: insert other include files here. */
 
-
-/* TODO: insert other definitions and declarations here. */
-
-/*
- * @brief   Application entry point.
+/**
+ * @brief Set up and initialize all required blocks and functions related to the board hardware.
  */
-int main(void) {
-  	/* Init board hardware. */
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitBootPeripherals();
-
-    printf("Hello World\n");
-
-    /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
-    /* Enter an infinite loop, just incrementing a counter. */
-    while(1) {
-        i++ ;
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
-    }
-    return 0 ;
+void BOARD_InitDebugConsole(void) {
+	/* The user initialization should be placed here */
 }
