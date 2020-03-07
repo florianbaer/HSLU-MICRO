@@ -42,8 +42,8 @@
 
 /* TODO: insert other include files here. */
 #include "Delay.h"
-#include "GPIO_Toggler.h"
 #include "Car_Joystick.h"
+#include "Car_LEDS.h"
 /* TODO: insert other definitions and declarations here. */
 
 /*
@@ -55,28 +55,35 @@ int main(void) {
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
 
+   	TurnOffAllLEDs();
+
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
     /* Enter an infinite loop, just incrementing a counter. */
     while(1) {
         i++ ;
 
-        unsigned char input = GetJoyStickInputs();
-        if(input == JS_UP){
+        uint32_t input = GetJoyStickInputs();
+
+    	if(input == JS_UP){
         	TurnOnFrontLEDs();
         }
         if(input == JS_DOWN)
         {
            	TurnOnRearLEDs();
         }
+    	if(input == JS_RIGHT){
+        	GoToNextLEDColorRight();
+        }
+        if(input == JS_LEFT)
+        {
+           	GoToNextLEDColorLeft();
+        }
         if(input == JS_PUSH)
         {
            	TurnOffAllLEDs();
         }
-
-
-        Delay(0.005);
-
+        Delay(0.5);
 
         /* 'Dummy' NOP to allow source level single stepping of
             tight while() loop */

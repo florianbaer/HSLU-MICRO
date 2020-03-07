@@ -14,6 +14,6 @@
 #define JS_LEFT 	0x00001000
 #define JS_PUSH		0x00010000
 
-unsigned char GetJoyStickInputs();
+uint32_t GetJoyStickInputs();
 
 #endif /* CAR_JOYSTICK_H_ */

@@ -60,11 +60,12 @@ BOARD_InitPins:
   - {pin_num: '83', peripheral: GPIOC, signal: 'GPIO, 11', pin_signal: ADC1_SE7b/PTC11/LLWU_P11/I2C1_SDA/FTM3_CH7/FB_RW_b, direction: OUTPUT}
   - {pin_num: '95', peripheral: GPIOD, signal: 'GPIO, 2', pin_signal: PTD2/LLWU_P13/SPI0_SOUT/UART2_RX/FTM3_CH2/FB_AD4/LPUART0_RX/I2C0_SCL, direction: OUTPUT}
   - {pin_num: '96', peripheral: GPIOD, signal: 'GPIO, 3', pin_signal: PTD3/SPI0_SIN/UART2_TX/FTM3_CH3/FB_AD3/LPUART0_TX/I2C0_SDA, direction: OUTPUT}
-  - {pin_num: '53', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA, direction: INPUT}
-  - {pin_num: '54', peripheral: GPIOB, signal: 'GPIO, 1', pin_signal: ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB, direction: INPUT}
-  - {pin_num: '55', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, direction: INPUT}
-  - {pin_num: '56', peripheral: GPIOB, signal: 'GPIO, 3', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, direction: INPUT}
-  - {pin_num: '57', peripheral: GPIOB, signal: 'GPIO, 9', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, direction: INPUT}
+  - {pin_num: '53', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA, direction: INPUT, pull_select: up,
+    pull_enable: enable}
+  - {pin_num: '54', peripheral: GPIOB, signal: 'GPIO, 1', pin_signal: ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB, direction: INPUT, pull_select: up, pull_enable: enable}
+  - {pin_num: '55', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, direction: INPUT, pull_select: up, pull_enable: enable}
+  - {pin_num: '56', peripheral: GPIOB, signal: 'GPIO, 3', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, direction: INPUT, pull_select: up, pull_enable: enable}
+  - {pin_num: '57', peripheral: GPIOB, signal: 'GPIO, 9', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, direction: INPUT, pull_select: up, pull_enable: enable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -186,17 +187,57 @@ void BOARD_InitPins(void)
     /* PORTB0 (pin 53) is configured as PTB0 */
     PORT_SetPinMux(BOARD_INITPINS_JS_RIGHT_PORT, BOARD_INITPINS_JS_RIGHT_PIN, kPORT_MuxAsGpio);
 
+    PORTB->PCR[0] = ((PORTB->PCR[0] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
+                      * corresponding PE field is set. */
+                     | (uint32_t)(kPORT_PullUp));
+
     /* PORTB1 (pin 54) is configured as PTB1 */
     PORT_SetPinMux(BOARD_INITPINS_JS_DOWN_PORT, BOARD_INITPINS_JS_DOWN_PIN, kPORT_MuxAsGpio);
+
+    PORTB->PCR[1] = ((PORTB->PCR[1] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
+                      * corresponding PE field is set. */
+                     | (uint32_t)(kPORT_PullUp));
 
     /* PORTB2 (pin 55) is configured as PTB2 */
     PORT_SetPinMux(BOARD_INITPINS_JS_UP_PORT, BOARD_INITPINS_JS_UP_PIN, kPORT_MuxAsGpio);
 
+    PORTB->PCR[2] = ((PORTB->PCR[2] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
+                      * corresponding PE field is set. */
+                     | (uint32_t)(kPORT_PullUp));
+
     /* PORTB3 (pin 56) is configured as PTB3 */
     PORT_SetPinMux(BOARD_INITPINS_JS_PUSH_PORT, BOARD_INITPINS_JS_PUSH_PIN, kPORT_MuxAsGpio);
 
+    PORTB->PCR[3] = ((PORTB->PCR[3] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
+                      * corresponding PE field is set. */
+                     | (uint32_t)(kPORT_PullUp));
+
     /* PORTB9 (pin 57) is configured as PTB9 */
     PORT_SetPinMux(BOARD_INITPINS_JS_LEFT_PORT, BOARD_INITPINS_JS_LEFT_PIN, kPORT_MuxAsGpio);
+
+    PORTB->PCR[9] = ((PORTB->PCR[9] &
+                      /* Mask bits to zero which are setting */
+                      (~(PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_ISF_MASK)))
+
+                     /* Pull Select: Internal pullup resistor is enabled on the corresponding pin, if the
+                      * corresponding PE field is set. */
+                     | (uint32_t)(kPORT_PullUp));
 
     /* PORTC10 (pin 82) is configured as PTC10 */
     PORT_SetPinMux(BOARD_INITPINS_LED_BLUE_FL_PORT, BOARD_INITPINS_LED_BLUE_FL_PIN, kPORT_MuxAsGpio);

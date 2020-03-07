@@ -5,8 +5,9 @@
  *      Author: hslu
  */
 
-#ifndef GPIO_TOGGLER_H_
-#define GPIO_TOGGLER_H_
+#ifndef CAR_LEDS_H_
+#define CAR_LEDS_H_
+
 
 void TurnOnFrontLEDs();
 void TurnOnRearLEDs();
@@ -14,4 +15,4 @@ void GoToNextLEDColorLeft();
 void GoToNextLEDColorRight();
 void TurnOffAllLEDs();
 
-#endif /* GPIO_TOGGLER_H_ */
+#endif /* CAR_LEDS_H_ */

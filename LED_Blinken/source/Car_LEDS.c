@@ -6,37 +6,95 @@
  */
 
 #include "MK22F51212.h"
-#include "fsl_gpio.h"
-#include "GPIO_Toggler.h"
 #include "pin_mux.h"
+#include "LEDS.h"
+
+uint32_t right_color_mode = 0;
+uint32_t left_color_mode = 0;
 
 void TurnOnFrontLEDs(){
-	GPIO_PinOn(BOARD_INITPINS_LED_RED_FR_GPIO, BOARD_INITPINS_LED_RED_FR_PIN);
-	GPIO_PinOn(BOARD_INITPINS_LED_RED_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);
+	LEDTurnOn(CONST_LED_F_L_RED_LED);
+	LEDTurnOn(CONST_LED_F_R_RED_LED);
 }
 
 void TurnOnRearLEDs(){
-	GPIO_PinOn(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN);
-	GPIO_PinOn(BOARD_INITPINS_LED_RED_RR_GPIO, BOARD_INITPINS_LED_RED_RR_PIN);
+	LEDTurnOn(CONST_LED_R_L_RED_LED);
+	LEDTurnOn(CONST_LED_R_R_RED_LED);
 }
 
 void GoToNextLEDColorLeft(){
-
+	left_color_mode += 1;
+	left_color_mode %= 5;
+	switch(left_color_mode){
+		case 0:
+			LEDTurnOff(CONST_LED_F_L_GREEN_LED);
+			LEDTurnOff(CONST_LED_F_L_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_L_RED_LED);
+			break;
+		case 1:
+			LEDTurnOff(CONST_LED_F_L_RED_LED);
+			LEDTurnOn(CONST_LED_F_L_GREEN_LED);
+			break;
+		case 2:
+			LEDTurnOff(CONST_LED_F_L_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_L_BLUE_LED);
+			break;
+		case 3:
+			LEDTurnOff(CONST_LED_F_L_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_L_RED_LED);
+			LEDTurnOn(CONST_LED_F_L_GREEN_LED);
+			break;
+		case 4:
+			LEDTurnOff(CONST_LED_F_L_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_L_BLUE_LED);
+			break;
+		default:
+			break;
+	}
 }
 
 void GoToNextLEDColorRight(){
-
+	right_color_mode += 1;
+	right_color_mode %= 5;
+	switch(right_color_mode){
+		case 0:
+			LEDTurnOff(CONST_LED_F_R_GREEN_LED);
+			LEDTurnOff(CONST_LED_F_R_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_R_RED_LED);
+			break;
+		case 1:
+			LEDTurnOff(CONST_LED_F_R_RED_LED);
+			LEDTurnOn(CONST_LED_F_R_GREEN_LED);
+			break;
+		case 2:
+			LEDTurnOff(CONST_LED_F_R_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_R_BLUE_LED);
+			break;
+		case 3:
+			LEDTurnOff(CONST_LED_F_R_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_R_RED_LED);
+			LEDTurnOn(CONST_LED_F_R_GREEN_LED);
+			break;
+		case 4:
+			LEDTurnOff(CONST_LED_F_R_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_R_BLUE_LED);
+			break;
+		default:
+			break;
+	}
 }
 
 void TurnOffAllLEDs(){
-	GPIO_PinOff(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_RED_RR_GPIO, BOARD_INITPINS_LED_RED_RR_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_RED_FR_GPIO, BOARD_INITPINS_LED_RED_FR_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_RED_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_GREEN_FR_GPIO, BOARD_INITPINS_LED_GREEN_FR_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_GREEN_FL_GPIO, BOARD_INITPINS_LED_GREEN_FL_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_BLUE_FR_GPIO, BOARD_INITPINS_LED_BLUE_FR_PIN);
-	GPIO_PinOff(BOARD_INITPINS_LED_BLUE_FL_GPIO, BOARD_INITPINS_LED_BLUE_FL_PIN);
+	LEDTurnOff(CONST_LED_F_L_RED_LED);
+	LEDTurnOff(CONST_LED_F_R_RED_LED);
+	LEDTurnOff(CONST_LED_F_L_GREEN_LED);
+	LEDTurnOff(CONST_LED_F_R_GREEN_LED);
+	LEDTurnOff(CONST_LED_F_L_BLUE_LED);
+	LEDTurnOff(CONST_LED_F_R_BLUE_LED);
+	LEDTurnOff(CONST_LED_R_L_RED_LED);
+	LEDTurnOff(CONST_LED_R_R_RED_LED);
 
+	right_color_mode = 0;
+	left_color_mode = 0;
 }
 

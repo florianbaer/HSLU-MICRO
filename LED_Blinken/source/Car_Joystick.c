@@ -5,6 +5,7 @@
  *      Author: hslu
  */
 
+#include <stdio.h>
 #include "MK22F51212.h"
 #include "fsl_gpio.h"
 #include "GPIO_Toggler.h"
@@ -17,21 +18,21 @@
 #define JS_PUSH		0x00010000
 
 
-unsigned char GetJoyStickInputs(){
-	unsigned char returnValue = 0;
-	if(GPIO_PinRead(BOARD_INITPINS_JS_UP_GPIO, BOARD_INITPINS_JS_DOWN_PIN) == 0){
+uint32_t GetJoyStickInputs(){
+	uint32_t returnValue = 0;
+	if(!GPIO_PinRead(BOARD_INITPINS_JS_UP_GPIO, BOARD_INITPINS_JS_UP_PIN)){
 		returnValue |= JS_UP;
 	}
-	if(GPIO_PinRead(BOARD_INITPINS_JS_RIGHT_GPIO, BOARD_INITPINS_JS_RIGHT_PIN) == 0){
+	if(!GPIO_PinRead(BOARD_INITPINS_JS_RIGHT_GPIO, BOARD_INITPINS_JS_RIGHT_PIN)){
 		returnValue |= JS_RIGHT;
 	}
-	if(GPIO_PinRead(BOARD_INITPINS_JS_DOWN_GPIO, BOARD_INITPINS_JS_DOWN_PIN) == 0){
+	if(!GPIO_PinRead(BOARD_INITPINS_JS_DOWN_GPIO, BOARD_INITPINS_JS_DOWN_PIN)){
 		returnValue |= JS_DOWN;
 	}
-	if(GPIO_PinRead(BOARD_INITPINS_JS_LEFT_GPIO, BOARD_INITPINS_JS_LEFT_PIN) == 0){
+	if(!GPIO_PinRead(BOARD_INITPINS_JS_LEFT_GPIO, BOARD_INITPINS_JS_LEFT_PIN)){
 		returnValue |= JS_LEFT;
 	}
-	if(GPIO_PinRead(BOARD_INITPINS_JS_PUSH_GPIO, BOARD_INITPINS_JS_PUSH_PIN) == 0){
+	if(!GPIO_PinRead(BOARD_INITPINS_JS_PUSH_GPIO, BOARD_INITPINS_JS_PUSH_PIN)){
 		returnValue |= JS_PUSH;
 	}
 
