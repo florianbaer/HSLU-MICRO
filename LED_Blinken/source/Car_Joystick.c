@@ -16,6 +16,7 @@
 #define JS_LEFT 	0x00001000
 #define JS_PUSH		0x00010000
 
+
 unsigned char GetJoyStickInputs(){
 	unsigned char returnValue = 0;
 	if(GPIO_PinRead(BOARD_INITPINS_JS_UP_GPIO, BOARD_INITPINS_JS_DOWN_PIN) == 0){

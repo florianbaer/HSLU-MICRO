@@ -8,6 +8,12 @@
 #ifndef CAR_JOYSTICK_H_
 #define CAR_JOYSTICK_H_
 
+#define JS_UP		0x00000001
+#define JS_RIGHT	0x00000010
+#define JS_DOWN		0x00000100
+#define JS_LEFT 	0x00001000
+#define JS_PUSH		0x00010000
+
 unsigned char GetJoyStickInputs();
 
 #endif /* CAR_JOYSTICK_H_ */
