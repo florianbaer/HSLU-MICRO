@@ -27,60 +27,35 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
- 
+
 /**
- * @file    LED_Blinken.c
- * @brief   Application entry point.
+ * @file    board.h
+ * @brief   Board initialization header file.
  */
-#include <stdio.h>
-#include "board.h"
-#include "peripherals.h"
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "MK22F51212.h"
-#include "fsl_gpio.h"
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
 
-/* TODO: insert other include files here. */
-#include "Delay.h"
-#include "GPIO_Toggler.h"
-#include "Car_Joystick.h"
-/* TODO: insert other definitions and declarations here. */
+#ifndef _BOARD_H_
+#define _BOARD_H_
 
-/*
- * @brief   Application entry point.
+/**
+ * @brief	The board name 
  */
-int main(void) {
-  	/* Init board hardware. */
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitBootPeripherals();
+#define BOARD_NAME "board"
 
-    /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
-    /* Enter an infinite loop, just incrementing a counter. */
-    while(1) {
-        i++ ;
+#if defined(__cplusplus)
+extern "C" {
+#endif /* __cplusplus */
 
-        unsigned char input = GetJoyStickInputs();
-        if(input == JS_UP){
-        	TurnOnFrontLEDs();
-        }
-        if(input == JS_DOWN)
-        {
-           	TurnOnRearLEDs();
-        }
-        if(input == JS_PUSH)
-        {
-           	TurnOffAllLEDs();
-        }
+/**
+ * @brief 	Initialize board specific settings.
+ */
+void BOARD_InitDebugConsole(void);
 
-
-        Delay(0.005);
-
-
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
-    }
-    return 0 ;
+#if defined(__cplusplus)
 }
+#endif /* __cplusplus */
+
+#endif /* _BOARD_H_ */
+
+

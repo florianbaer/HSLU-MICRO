@@ -81,41 +81,6 @@ void BOARD_InitBootPins(void);
 #define BOARD_INITPINS_LED_BLUE_FR_PIN 3U     /*!<@brief PORTD pin index: 3 */
                                               /* @} */
 
-/*! @name PORTB0 (number 53), JS_RIGHT
-  @{ */
-#define BOARD_INITPINS_JS_RIGHT_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
-#define BOARD_INITPINS_JS_RIGHT_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_INITPINS_JS_RIGHT_PIN 0U     /*!<@brief PORTB pin index: 0 */
-                                           /* @} */
-
-/*! @name PORTB1 (number 54), JS_DOWN
-  @{ */
-#define BOARD_INITPINS_JS_DOWN_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
-#define BOARD_INITPINS_JS_DOWN_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_INITPINS_JS_DOWN_PIN 1U     /*!<@brief PORTB pin index: 1 */
-                                          /* @} */
-
-/*! @name PORTB2 (number 55), JS_UP
-  @{ */
-#define BOARD_INITPINS_JS_UP_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
-#define BOARD_INITPINS_JS_UP_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_INITPINS_JS_UP_PIN 2U     /*!<@brief PORTB pin index: 2 */
-                                        /* @} */
-
-/*! @name PORTB3 (number 56), JS_PUSH
-  @{ */
-#define BOARD_INITPINS_JS_PUSH_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
-#define BOARD_INITPINS_JS_PUSH_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_INITPINS_JS_PUSH_PIN 3U     /*!<@brief PORTB pin index: 3 */
-                                          /* @} */
-
-/*! @name PORTB9 (number 57), JS_LEFT
-  @{ */
-#define BOARD_INITPINS_JS_LEFT_GPIO GPIOB /*!<@brief GPIO device name: GPIOB */
-#define BOARD_INITPINS_JS_LEFT_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_INITPINS_JS_LEFT_PIN 9U     /*!<@brief PORTB pin index: 9 */
-                                          /* @} */
-
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *

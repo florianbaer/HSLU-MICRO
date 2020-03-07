@@ -21,11 +21,6 @@ pin_labels:
 - {pin_num: '83', pin_signal: ADC1_SE7b/PTC11/LLWU_P11/I2C1_SDA/FTM3_CH7/FB_RW_b, label: LED_GREEN_FR, identifier: LED_GREEN_FR}
 - {pin_num: '95', pin_signal: PTD2/LLWU_P13/SPI0_SOUT/UART2_RX/FTM3_CH2/FB_AD4/LPUART0_RX/I2C0_SCL, label: LED_RED_FR, identifier: LED_RED_FR}
 - {pin_num: '96', pin_signal: PTD3/SPI0_SIN/UART2_TX/FTM3_CH3/FB_AD3/LPUART0_TX/I2C0_SDA, label: LED_BLUE_FR, identifier: LED_BLUE_FR}
-- {pin_num: '53', pin_signal: ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA, label: JS_RIGHT, identifier: JS_RIGHT}
-- {pin_num: '54', pin_signal: ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB, label: JS_DOWN, identifier: JS_DOWN}
-- {pin_num: '55', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, label: JS_UP, identifier: JS_UP}
-- {pin_num: '56', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, label: JS_PUSH, identifier: JS_PUSH}
-- {pin_num: '57', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, label: JS_LEFT, identifier: JS_LEFT}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -60,11 +55,6 @@ BOARD_InitPins:
   - {pin_num: '83', peripheral: GPIOC, signal: 'GPIO, 11', pin_signal: ADC1_SE7b/PTC11/LLWU_P11/I2C1_SDA/FTM3_CH7/FB_RW_b, direction: OUTPUT}
   - {pin_num: '95', peripheral: GPIOD, signal: 'GPIO, 2', pin_signal: PTD2/LLWU_P13/SPI0_SOUT/UART2_RX/FTM3_CH2/FB_AD4/LPUART0_RX/I2C0_SCL, direction: OUTPUT}
   - {pin_num: '96', peripheral: GPIOD, signal: 'GPIO, 3', pin_signal: PTD3/SPI0_SIN/UART2_TX/FTM3_CH3/FB_AD3/LPUART0_TX/I2C0_SDA, direction: OUTPUT}
-  - {pin_num: '53', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA, direction: INPUT}
-  - {pin_num: '54', peripheral: GPIOB, signal: 'GPIO, 1', pin_signal: ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB, direction: INPUT}
-  - {pin_num: '55', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, direction: INPUT}
-  - {pin_num: '56', peripheral: GPIOB, signal: 'GPIO, 3', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, direction: INPUT}
-  - {pin_num: '57', peripheral: GPIOB, signal: 'GPIO, 9', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, direction: INPUT}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -79,8 +69,6 @@ void BOARD_InitPins(void)
 {
     /* Port A Clock Gate Control: Clock enabled */
     CLOCK_EnableClock(kCLOCK_PortA);
-    /* Port B Clock Gate Control: Clock enabled */
-    CLOCK_EnableClock(kCLOCK_PortB);
     /* Port C Clock Gate Control: Clock enabled */
     CLOCK_EnableClock(kCLOCK_PortC);
     /* Port D Clock Gate Control: Clock enabled */
@@ -99,41 +87,6 @@ void BOARD_InitPins(void)
     };
     /* Initialize GPIO functionality on pin PTA17 (pin 47)  */
     GPIO_PinInit(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN, &LED_RED_RL_config);
-
-    gpio_pin_config_t JS_RIGHT_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTB0 (pin 53)  */
-    GPIO_PinInit(BOARD_INITPINS_JS_RIGHT_GPIO, BOARD_INITPINS_JS_RIGHT_PIN, &JS_RIGHT_config);
-
-    gpio_pin_config_t JS_DOWN_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTB1 (pin 54)  */
-    GPIO_PinInit(BOARD_INITPINS_JS_DOWN_GPIO, BOARD_INITPINS_JS_DOWN_PIN, &JS_DOWN_config);
-
-    gpio_pin_config_t JS_UP_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTB2 (pin 55)  */
-    GPIO_PinInit(BOARD_INITPINS_JS_UP_GPIO, BOARD_INITPINS_JS_UP_PIN, &JS_UP_config);
-
-    gpio_pin_config_t JS_PUSH_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTB3 (pin 56)  */
-    GPIO_PinInit(BOARD_INITPINS_JS_PUSH_GPIO, BOARD_INITPINS_JS_PUSH_PIN, &JS_PUSH_config);
-
-    gpio_pin_config_t JS_LEFT_config = {
-        .pinDirection = kGPIO_DigitalInput,
-        .outputLogic = 0U
-    };
-    /* Initialize GPIO functionality on pin PTB9 (pin 57)  */
-    GPIO_PinInit(BOARD_INITPINS_JS_LEFT_GPIO, BOARD_INITPINS_JS_LEFT_PIN, &JS_LEFT_config);
 
     gpio_pin_config_t LED_GREEN_FL_config = {
         .pinDirection = kGPIO_DigitalOutput,
@@ -182,21 +135,6 @@ void BOARD_InitPins(void)
 
     /* PORTA17 (pin 47) is configured as PTA17 */
     PORT_SetPinMux(BOARD_INITPINS_LED_RED_RL_PORT, BOARD_INITPINS_LED_RED_RL_PIN, kPORT_MuxAsGpio);
-
-    /* PORTB0 (pin 53) is configured as PTB0 */
-    PORT_SetPinMux(BOARD_INITPINS_JS_RIGHT_PORT, BOARD_INITPINS_JS_RIGHT_PIN, kPORT_MuxAsGpio);
-
-    /* PORTB1 (pin 54) is configured as PTB1 */
-    PORT_SetPinMux(BOARD_INITPINS_JS_DOWN_PORT, BOARD_INITPINS_JS_DOWN_PIN, kPORT_MuxAsGpio);
-
-    /* PORTB2 (pin 55) is configured as PTB2 */
-    PORT_SetPinMux(BOARD_INITPINS_JS_UP_PORT, BOARD_INITPINS_JS_UP_PIN, kPORT_MuxAsGpio);
-
-    /* PORTB3 (pin 56) is configured as PTB3 */
-    PORT_SetPinMux(BOARD_INITPINS_JS_PUSH_PORT, BOARD_INITPINS_JS_PUSH_PIN, kPORT_MuxAsGpio);
-
-    /* PORTB9 (pin 57) is configured as PTB9 */
-    PORT_SetPinMux(BOARD_INITPINS_JS_LEFT_PORT, BOARD_INITPINS_JS_LEFT_PIN, kPORT_MuxAsGpio);
 
     /* PORTC10 (pin 82) is configured as PTC10 */
     PORT_SetPinMux(BOARD_INITPINS_LED_BLUE_FL_PORT, BOARD_INITPINS_LED_BLUE_FL_PIN, kPORT_MuxAsGpio);

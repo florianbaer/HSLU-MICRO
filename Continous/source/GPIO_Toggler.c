@@ -14,15 +14,3 @@ void GPIO_PinToggle(GPIO_Type *base, uint32_t pin)
 	uint32_t state = GPIO_PinRead(base, pin) == 0;
 	GPIO_PinWrite(base, pin, state);
 }
-
-
-void GPIO_PinOn(GPIO_Type *base, uint32_t pin)
-{
-	GPIO_PinWrite(base, pin, 1);
-}
-
-
-void GPIO_PinOff(GPIO_Type *base, uint32_t pin)
-{
-	GPIO_PinWrite(base, pin, 0);
-}

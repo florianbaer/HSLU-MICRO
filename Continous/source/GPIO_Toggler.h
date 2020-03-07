@@ -10,7 +10,4 @@
 
 void GPIO_PinToggle(GPIO_Type *base, uint32_t pin);
 
-void GPIO_PinOn(GPIO_Type *base, uint32_t pin);
-void GPIO_PinOff(GPIO_Type *base, uint32_t pin);
-
 #endif /* GPIO_TOGGLER_H_ */

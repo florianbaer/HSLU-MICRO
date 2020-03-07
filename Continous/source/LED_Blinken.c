@@ -43,7 +43,6 @@
 /* TODO: insert other include files here. */
 #include "Delay.h"
 #include "GPIO_Toggler.h"
-#include "Car_Joystick.h"
 /* TODO: insert other definitions and declarations here. */
 
 /*
@@ -60,22 +59,49 @@ int main(void) {
     /* Enter an infinite loop, just incrementing a counter. */
     while(1) {
         i++ ;
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_RR_GPIO, BOARD_INITPINS_LED_RED_RR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_RR_GPIO, BOARD_INITPINS_LED_RED_RR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_GREEN_FL_GPIO, BOARD_INITPINS_LED_GREEN_FL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_GREEN_FL_GPIO, BOARD_INITPINS_LED_GREEN_FL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_BLUE_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_BLUE_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_FR_GPIO, BOARD_INITPINS_LED_RED_FR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_RED_FR_GPIO, BOARD_INITPINS_LED_RED_FR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_GREEN_FR_GPIO, BOARD_INITPINS_LED_GREEN_FR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_GREEN_FR_GPIO, BOARD_INITPINS_LED_GREEN_FR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_BLUE_FR_GPIO, BOARD_INITPINS_LED_RED_FR_PIN);
+        Delay(0.5);
+        GPIO_PinToggle(BOARD_INITPINS_LED_BLUE_FR_GPIO, BOARD_INITPINS_LED_RED_FR_PIN);
 
-        unsigned char input = GetJoyStickInputs();
-        if(input == JS_UP){
-        	TurnOnFrontLEDs();
-        }
-        if(input == JS_DOWN)
-        {
-           	TurnOnRearLEDs();
-        }
-        if(input == JS_PUSH)
-        {
-           	TurnOffAllLEDs();
-        }
 
 
-        Delay(0.005);
+        // Toggle LED_A (Port A, Pin 15)
+        /*state = GPIO_PinRead(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN) == 0;
+        GPIO_PinWrite(BOARD_INITPINS_LED_RED_RL_GPIO, BOARD_INITPINS_LED_RED_RL_PIN, state);
+
+
+        Delay(500000U);
+        state = GPIO_PinRead(BOARD_INITPINS_LED_RED_RR_GPIO, BOARD_INITPINS_LED_RED_RR_PIN) == 0;
+        GPIO_PinWrite(BOARD_INITPINS_LED_RED_RR_GPIO, BOARD_INITPINS_LED_RED_RR_PIN, state);*/
 
 
         /* 'Dummy' NOP to allow source level single stepping of

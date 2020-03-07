@@ -8,9 +8,10 @@
 #ifndef GPIO_TOGGLER_H_
 #define GPIO_TOGGLER_H_
 
-void GPIO_PinToggle(GPIO_Type *base, uint32_t pin);
-
-void GPIO_PinOn(GPIO_Type *base, uint32_t pin);
-void GPIO_PinOff(GPIO_Type *base, uint32_t pin);
+void TurnOnFrontLEDs();
+void TurnOnRearLEDs();
+void GoToNextLEDColorLeft();
+void GoToNextLEDColorRight();
+void TurnOffAllLEDs();
 
 #endif /* GPIO_TOGGLER_H_ */
