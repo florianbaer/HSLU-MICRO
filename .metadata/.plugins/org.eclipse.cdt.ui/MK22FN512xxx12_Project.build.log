@@ -1,0 +1,6 @@
+18:55:27 **** Incremental Build of configuration Debug for project MK22FN512xxx12_Project ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+
+18:55:27 Build Finished. 0 errors, 0 warnings. (took 337ms)
+
