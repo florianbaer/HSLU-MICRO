@@ -1,0 +1,6 @@
+11:47:01 **** Incremental Build of configuration Debug for project Hello_World ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+
+11:47:01 Build Finished. 0 errors, 0 warnings. (took 501ms)
+
