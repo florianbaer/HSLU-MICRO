@@ -977,3 +977,24 @@ java.io.FileNotFoundException: /home/hslu/MCUXpresso_workspace/LED_Blinken/Debug
 
 !ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-03-07 12:46:52.022
 !MESSAGE Telnet session connected on port 2335->40022 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2020-03-07 13:00:10.267
+!MESSAGE Stream closed
+!STACK 0
+java.lang.Exception: java.io.IOException: Stream closed
+	at com.crt.utils.general.Reporter.log(Reporter.java:580)
+	at com.nxp.mcuxpresso.core.debug.support.segger.server.JLinkGdbServer$4.run(JLinkGdbServer.java:699)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:170)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:283)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.nxp.mcuxpresso.core.debug.support.segger.server.JLinkGdbServer$4.run(JLinkGdbServer.java:694)
+	... 1 more
