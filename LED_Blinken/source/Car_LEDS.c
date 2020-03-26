@@ -5,15 +5,17 @@
  *      Author: hslu
  */
 
+#include <structs.h>
 #include "MK22F51212.h"
 #include "pin_mux.h"
 #include "LEDS.h"
+#include "structs.h"
 
 uint32_t right_color_mode = 0;
 uint32_t left_color_mode = 0;
 
-void TurnOnFrontLEDs(){
-	LEDTurnOn(CONST_LED_F_L_RED_LED);
+void TurnOnFrontLEDs(counter _counter){
+	LEDTurnOn(CONST_LED_F_L_RED_LED, _counter);
 	LEDTurnOn(CONST_LED_F_R_RED_LED);
 }
 
@@ -84,7 +86,7 @@ void GoToNextLEDColorRight(){
 	}
 }
 
-void TurnOffAllLEDs(){
+void TurnOffAllLEDs(counter ){
 	LEDTurnOff(CONST_LED_F_L_RED_LED);
 	LEDTurnOff(CONST_LED_F_R_RED_LED);
 	LEDTurnOff(CONST_LED_F_L_GREEN_LED);

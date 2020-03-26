@@ -33,6 +33,7 @@
  * @brief   Application entry point.
  */
 #include <stdio.h>
+#include <structs.h>
 #include "board.h"
 #include "peripherals.h"
 #include "pin_mux.h"
@@ -54,36 +55,41 @@ int main(void) {
     BOARD_InitBootPins();
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
-
    	TurnOffAllLEDs();
+
+   	led_counter counter;
+
+    uint32_t previousInput = 0;
 
     /* Force the counter to be placed into memory. */
     volatile static int i = 0 ;
     /* Enter an infinite loop, just incrementing a counter. */
     while(1) {
+
         i++ ;
 
         uint32_t input = GetJoyStickInputs();
 
-    	if(input == JS_UP){
-        	TurnOnFrontLEDs();
+    	if((input & JS_UP) > 0 && (previousInput & JS_UP) == 0){
+        	TurnOnFrontLEDs(&counter);
         }
-        if(input == JS_DOWN)
-        {
-           	TurnOnRearLEDs();
+
+    	if((input & JS_DOWN) > 0 && (previousInput & JS_DOWN) == 0){
+        	TurnOnRearLEDs(&counter);
         }
-    	if(input == JS_RIGHT){
-        	GoToNextLEDColorRight();
+
+    	if((input & JS_RIGHT) > 0 && (previousInput & JS_RIGHT) == 0){
+    		GoToNextLEDColorRight(&counter);
         }
-        if(input == JS_LEFT)
-        {
-           	GoToNextLEDColorLeft();
+
+    	if((input & JS_LEFT) > 0 && (previousInput & JS_LEFT) == 0){
+    		GoToNextLEDColorLeft(&counter);
         }
-        if(input == JS_PUSH)
-        {
-           	TurnOffAllLEDs();
+
+    	if((input & JS_PUSH) > 0 && (previousInput & JS_PUSH) == 0){
+    		TurnOffAllLEDs(&counter);
         }
-        Delay(0.5);
+        previousInput = input;
 
         /* 'Dummy' NOP to allow source level single stepping of
             tight while() loop */
