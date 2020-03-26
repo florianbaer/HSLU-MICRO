@@ -9,10 +9,10 @@
 #define CAR_LEDS_H_
 
 
-void TurnOnFrontLEDs();
-void TurnOnRearLEDs();
-void GoToNextLEDColorLeft();
-void GoToNextLEDColorRight();
+void TurnOnFrontLEDs(led_counter*);
+void TurnOnRearLEDs(led_counter*);
+void GoToNextLEDColorLeft(led_counter*);
+void GoToNextLEDColorRight(led_counter*);
 void TurnOffAllLEDs();
 
 #endif /* CAR_LEDS_H_ */

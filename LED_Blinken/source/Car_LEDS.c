@@ -14,79 +14,79 @@
 uint32_t right_color_mode = 0;
 uint32_t left_color_mode = 0;
 
-void TurnOnFrontLEDs(counter _counter){
+void TurnOnFrontLEDs(led_counter* _counter){
 	LEDTurnOn(CONST_LED_F_L_RED_LED, _counter);
-	LEDTurnOn(CONST_LED_F_R_RED_LED);
+	LEDTurnOn(CONST_LED_F_R_RED_LED, _counter);
 }
 
-void TurnOnRearLEDs(){
-	LEDTurnOn(CONST_LED_R_L_RED_LED);
-	LEDTurnOn(CONST_LED_R_R_RED_LED);
+void TurnOnRearLEDs(led_counter* _counter){
+	LEDTurnOn(CONST_LED_R_L_RED_LED, _counter);
+	LEDTurnOn(CONST_LED_R_R_RED_LED, _counter);
 }
 
-void GoToNextLEDColorLeft(){
+void GoToNextLEDColorLeft(led_counter* _counter){
 	left_color_mode += 1;
 	left_color_mode %= 5;
 	switch(left_color_mode){
 		case 0:
 			LEDTurnOff(CONST_LED_F_L_GREEN_LED);
 			LEDTurnOff(CONST_LED_F_L_BLUE_LED);
-			LEDTurnOn(CONST_LED_F_L_RED_LED);
+			LEDTurnOn(CONST_LED_F_L_RED_LED, _counter);
 			break;
 		case 1:
 			LEDTurnOff(CONST_LED_F_L_RED_LED);
-			LEDTurnOn(CONST_LED_F_L_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_L_GREEN_LED, _counter);
 			break;
 		case 2:
 			LEDTurnOff(CONST_LED_F_L_GREEN_LED);
-			LEDTurnOn(CONST_LED_F_L_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_L_BLUE_LED, _counter);
 			break;
 		case 3:
 			LEDTurnOff(CONST_LED_F_L_BLUE_LED);
-			LEDTurnOn(CONST_LED_F_L_RED_LED);
-			LEDTurnOn(CONST_LED_F_L_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_L_RED_LED, _counter);
+			LEDTurnOn(CONST_LED_F_L_GREEN_LED, _counter);
 			break;
 		case 4:
 			LEDTurnOff(CONST_LED_F_L_GREEN_LED);
-			LEDTurnOn(CONST_LED_F_L_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_L_BLUE_LED, _counter);
 			break;
 		default:
 			break;
 	}
 }
 
-void GoToNextLEDColorRight(){
+void GoToNextLEDColorRight(led_counter* _counter){
 	right_color_mode += 1;
 	right_color_mode %= 5;
 	switch(right_color_mode){
 		case 0:
 			LEDTurnOff(CONST_LED_F_R_GREEN_LED);
 			LEDTurnOff(CONST_LED_F_R_BLUE_LED);
-			LEDTurnOn(CONST_LED_F_R_RED_LED);
+			LEDTurnOn(CONST_LED_F_R_RED_LED, _counter);
 			break;
 		case 1:
 			LEDTurnOff(CONST_LED_F_R_RED_LED);
-			LEDTurnOn(CONST_LED_F_R_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_R_GREEN_LED, _counter);
 			break;
 		case 2:
 			LEDTurnOff(CONST_LED_F_R_GREEN_LED);
-			LEDTurnOn(CONST_LED_F_R_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_R_BLUE_LED, _counter);
 			break;
 		case 3:
 			LEDTurnOff(CONST_LED_F_R_BLUE_LED);
-			LEDTurnOn(CONST_LED_F_R_RED_LED);
-			LEDTurnOn(CONST_LED_F_R_GREEN_LED);
+			LEDTurnOn(CONST_LED_F_R_RED_LED, _counter);
+			LEDTurnOn(CONST_LED_F_R_GREEN_LED, _counter);
 			break;
 		case 4:
 			LEDTurnOff(CONST_LED_F_R_GREEN_LED);
-			LEDTurnOn(CONST_LED_F_R_BLUE_LED);
+			LEDTurnOn(CONST_LED_F_R_BLUE_LED, _counter);
 			break;
 		default:
 			break;
 	}
 }
 
-void TurnOffAllLEDs(counter ){
+void TurnOffAllLEDs(led_counter counter){
 	LEDTurnOff(CONST_LED_F_L_RED_LED);
 	LEDTurnOff(CONST_LED_F_R_RED_LED);
 	LEDTurnOff(CONST_LED_F_L_GREEN_LED);

@@ -9,6 +9,7 @@
 #include "fsl_gpio.h"
 #include "GPIO_Toggler.h"
 #include "pin_mux.h"
+#include "structs.h"
 
 #define CONST_LED_F_L_RED_LED 0
 #define CONST_LED_F_L_GREEN_LED 1
@@ -19,7 +20,7 @@
 #define CONST_LED_R_L_RED_LED 6
 #define CONST_LED_R_R_RED_LED 7
 
-void LEDTurnOn(uint32_t led, counter _counter){
+void LEDTurnOn(uint32_t led, led_counter* _counter){
 	switch(led){
 	case CONST_LED_F_L_RED_LED:
 		GPIO_PinOn(BOARD_INITPINS_LED_RED_FL_GPIO, BOARD_INITPINS_LED_RED_FL_PIN);

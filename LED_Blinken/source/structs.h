@@ -8,11 +8,13 @@
 #ifndef STRUCTS_H_
 #define STRUCTS_H_
 
+#include <stdint.h>
+
 typedef struct _adress {
 	char forename[120];
 	char lastname[120];
     char adresse[120];
-    int8_t zipcode;
+	int8_t zipcode;
     char adress[120];
 
 } adress;
@@ -35,14 +37,14 @@ typedef enum _boolean {
 } boolean;
 
 typedef struct _led_counter {
-	uint16_t FRR = 0;
-	uint16_t FRG = 0;
-	uint16_t FRB = 0;
-	uint16_t FLR = 0;
-	uint16_t FLG = 0;
-	uint16_t FLB = 0;
-	uint16_t RRR = 0;
-	uint16_t RLR = 0;
+	uint16_t FRR;
+	uint16_t FRG;
+	uint16_t FRB;
+	uint16_t FLR;
+	uint16_t FLG;
+	uint16_t FLB;
+	uint16_t RRR;
+	uint16_t RLR;
 } led_counter;
 
 #endif /* STRUCTS_H_ */
