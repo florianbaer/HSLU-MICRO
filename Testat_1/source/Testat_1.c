@@ -1,104 +1,161 @@
 /*
- * Copyright 2016-2020 NXP
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *
- * o Redistributions of source code must retain the above copyright notice, this list
- *   of conditions and the following disclaimer.
- *
- * o Redistributions in binary form must reproduce the above copyright notice, this
- *   list of conditions and the following disclaimer in the documentation and/or
- *   other materials provided with the distribution.
- *
- * o Neither the name of NXP Semiconductor, Inc. nor the names of its
- *   contributors may be used to endorse or promote products derived from this
- *   software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
- * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * Copyright (c) 2020, Lucerne University of Applied Sciences and Arts.
+ * @author Lucien Zuercher <lucien.zuercher@stud.hslu.ch>
  */
- 
+
 /**
- * @file    LED_Blinken.c
- * @brief   Application entry point.
+ * @brief   Application entry for Amazon FreeRTOS.
  */
+#define EXAMPLE_DESCRIPTION   "FreeRTOS Example"
+#define TASK_STACK_SIZE 	  300
+
 #include <stdio.h>
-#include <structs.h>
-#include "board.h"
 #include "peripherals.h"
-#include "pin_mux.h"
 #include "clock_config.h"
 #include "MK22F51212.h"
+#include "pin_mux.h"
 #include "fsl_gpio.h"
+#include "fsl_port.h"
 
-/* TODO: insert other include files here. */
-#include "Delay.h"
 #include "Car_Joystick.h"
-#include "Car_LEDS.h"
-/* TODO: insert other definitions and declarations here. */
+#include "structs.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
+
+volatile static uint8_t joystickCounter = 0;
+TaskHandle_t joystickTaskHandle = NULL;
+
+// For PORTB ISR
+// defines timeout of interrupt received, ignoring interrupt happening in given time frame
+#define INTERRUPT_PUSH_TIMEOUT_IN_MS	130
+// last interrupt received, used for bouncy prevention
+static TickType_t lastInterruptReceived;
+led_counter counter;
+/**
+ * Handle Joystick interrupt by handling
+ * PortB Interrupts
+ */
+void PORTB_IRQHandler(void) {
+	static BaseType_t pxHigherPriorityTaskWoken;
+	// clear interrupt flags
+	uint32_t data = PORT_GetPinsInterruptFlags(PORTB);
+	PORT_ClearPinsInterruptFlags(PORTB, 0xFFFF);
+
+	MaskJoystickValues(data);
+
+	// prevent switch bounce effect by adding a timeout
+	TickType_t currentClock = xTaskGetTickCount();
+	if (lastInterruptReceived + pdMS_TO_TICKS(INTERRUPT_PUSH_TIMEOUT_IN_MS)
+			< currentClock) {
+		lastInterruptReceived = currentClock;
+
+		// increment semaphore
+		pxHigherPriorityTaskWoken = pdFALSE;
+		if (joystickTaskHandle != NULL) {
+			vTaskNotifyGiveFromISR(joystickTaskHandle,
+					&pxHigherPriorityTaskWoken);
+			portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);
+		}
+	}
+}
+
+/**
+ * Task notified by joystick interrupt
+ */
+static void app_joystick_pressed_task(void *pv) {
+	uint32_t ulNotifiedValue;
+	for (;;) {
+		ulNotifiedValue = ulTaskNotifyTake(pdFALSE, portMAX_DELAY);
+
+		uint32_t values = GetJoystickValues();
+		//printf("Pressed: %d \n", values);
+		if (ulNotifiedValue > 0) {  // Not timed out
+			Toggle_Lights(values);
+
+			ResetJoystickValues();
+		}
+	} /* for */
+}
+
+void Toggle_Lights(uint32_t input) {
+	if ((input & JS_UP) > 0) {
+		TurnOnFrontLEDs(&counter);
+	}
+
+	if ((input & JS_DOWN) > 0) {
+		TurnOnRearLEDs(&counter);
+	}
+
+	if ((input & JS_RIGHT) > 0) {
+		GoToNextLEDColorRight(&counter);
+	}
+
+	if ((input & JS_LEFT) > 0) {
+		GoToNextLEDColorLeft(&counter);
+	}
+
+	if ((input & JS_PUSH) > 0) {
+		TurnOffAllLEDs(&counter);
+	}
+}
+
+/**
+ * App print task, which prints out counter value
+ */
+static void app_print_counter_task(void *pv) {
+	for (;;) {
+		vTaskDelay(pdMS_TO_TICKS(5000));
+		printf("-----------------------\n");
+		printf("FLR: %d\n", counter.FLR);
+		printf("FLG: %d\n", counter.FLG);
+		printf("FLB: %d\n", counter.FLB);
+		printf("-----------------------\n");
+		printf("FRR: %d\n", counter.FRR);
+		printf("FRG: %d\n", counter.FRG);
+		printf("FRB: %d\n", counter.FRB);
+		printf("-----------------------\n");
+		printf("RRR: %d\n", counter.RRR);
+		printf("RLR: %d\n", counter.RLR);
+		printf("-----------------------\n");
+	} /* for */
+}
 
 /*
  * @brief   Application entry point.
  */
 int main(void) {
-  	/* Init board hardware. */
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitBootPeripherals();
-   	TurnOffAllLEDs();
+	/* Init board hardware. */
+	BOARD_InitBootPins();
+	BOARD_InitBootClocks();
+	BOARD_InitBootPeripherals();
 
-   	led_counter counter;
+	TurnOffAllLEDs(counter);
 
-    uint32_t previousInput = 0;
+	// set priority of interrupt to be higher then configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
+	// this is defined by FreeRTOS (https://www.freertos.org/RTOS-Cortex-M3-M4.html)
+	NVIC_SetPriority(PORTB_IRQn,
+			configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 1);
+	// enable interrupt for PortB, on which the Joystick GPIO is located
+	EnableIRQ(PORTB_IRQn);
 
-    /* Force the counter to be placed into memory. */
-    volatile static int i = 0 ;
-    /* Enter an infinite loop, just incrementing a counter. */
-    while(1) {
+	//utils_print_tutorial(EXAMPLE_DESCRIPTION);
 
-        i++ ;
+	xTaskCreate(app_joystick_pressed_task, "JoystickTask",
+	TASK_STACK_SIZE,
+	NULL,
+	tskIDLE_PRIORITY + 2,			//< higher priority then print task
+	&joystickTaskHandle);
 
-        uint32_t input = GetJoyStickInputs();
+	TaskHandle_t printTaskHandle;
+	xTaskCreate(app_print_counter_task, "PrintCounterTask",
+	TASK_STACK_SIZE,
+	NULL,
+	tskIDLE_PRIORITY, &printTaskHandle);
 
-    	if((input & JS_UP) > 0 && (previousInput & JS_UP) == 0){
-        	TurnOnFrontLEDs(&counter);
-        }
+	// start scheduler, this will start the tasks and timers and will never return
+	vTaskStartScheduler();
 
-    	if((input & JS_DOWN) > 0 && (previousInput & JS_DOWN) == 0){
-        	TurnOnRearLEDs(&counter);
-        }
-
-    	if((input & JS_RIGHT) > 0 && (previousInput & JS_RIGHT) == 0){
-    		GoToNextLEDColorRight(&counter);
-        }
-
-    	if((input & JS_LEFT) > 0 && (previousInput & JS_LEFT) == 0){
-    		GoToNextLEDColorLeft(&counter);
-        }
-
-    	if((input & JS_PUSH) > 0 && (previousInput & JS_PUSH) == 0){
-    		TurnOffAllLEDs(&counter);
-        }
-
-    	int current_time = time(NULL);
-
-        previousInput = input;
-
-
-
-        /* 'Dummy' NOP to allow source level single stepping of
-            tight while() loop */
-        __asm volatile ("nop");
-    }
-    return 0 ;
+	return 0;
 }

@@ -95,7 +95,6 @@ int main(void) {
         previousInput = input;
 
 
-
         /* 'Dummy' NOP to allow source level single stepping of
             tight while() loop */
         __asm volatile ("nop");

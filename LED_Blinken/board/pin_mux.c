@@ -167,15 +167,15 @@ void LED(void)
 Joystick:
 - options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
-  - {pin_num: '53', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA, direction: INPUT, gpio_interrupt: kPORT_DMARisingEdge,
+  - {pin_num: '53', peripheral: GPIOB, signal: 'GPIO, 0', pin_signal: ADC0_SE8/ADC1_SE8/PTB0/LLWU_P5/I2C0_SCL/FTM1_CH0/FTM1_QD_PHA, direction: INPUT, gpio_interrupt: kPORT_InterruptOrDMADisabled,
     slew_rate: slow, pull_select: up, pull_enable: enable}
-  - {pin_num: '54', peripheral: GPIOB, signal: 'GPIO, 1', pin_signal: ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB, direction: INPUT, gpio_interrupt: kPORT_DMARisingEdge,
+  - {pin_num: '54', peripheral: GPIOB, signal: 'GPIO, 1', pin_signal: ADC0_SE9/ADC1_SE9/PTB1/I2C0_SDA/FTM1_CH1/FTM1_QD_PHB, direction: INPUT, gpio_interrupt: kPORT_InterruptOrDMADisabled,
     slew_rate: slow, pull_select: up, pull_enable: enable}
-  - {pin_num: '55', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, direction: INPUT, gpio_interrupt: kPORT_DMARisingEdge,
+  - {pin_num: '55', peripheral: GPIOB, signal: 'GPIO, 2', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, direction: INPUT, gpio_interrupt: kPORT_InterruptOrDMADisabled,
     slew_rate: slow, pull_select: up, pull_enable: enable}
-  - {pin_num: '56', peripheral: GPIOB, signal: 'GPIO, 3', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, direction: INPUT, gpio_interrupt: kPORT_DMARisingEdge,
+  - {pin_num: '56', peripheral: GPIOB, signal: 'GPIO, 3', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, direction: INPUT, gpio_interrupt: kPORT_InterruptOrDMADisabled,
     slew_rate: slow, pull_select: up, pull_enable: enable}
-  - {pin_num: '57', peripheral: GPIOB, signal: 'GPIO, 9', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, direction: INPUT, gpio_interrupt: kPORT_DMARisingEdge,
+  - {pin_num: '57', peripheral: GPIOB, signal: 'GPIO, 9', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, direction: INPUT, gpio_interrupt: kPORT_InterruptOrDMADisabled,
     slew_rate: slow, pull_select: up, pull_enable: enable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
@@ -230,8 +230,8 @@ void Joystick(void)
     /* PORTB0 (pin 53) is configured as PTB0 */
     PORT_SetPinMux(JOYSTICK_JS_RIGHT_PORT, JOYSTICK_JS_RIGHT_PIN, kPORT_MuxAsGpio);
 
-    /* Interrupt configuration on PORTB0 (pin 53): DMA request on rising edge */
-    PORT_SetPinInterruptConfig(JOYSTICK_JS_RIGHT_PORT, JOYSTICK_JS_RIGHT_PIN, kPORT_DMARisingEdge);
+    /* Interrupt configuration on PORTB0 (pin 53): Interrupt/DMA request is disabled */
+    PORT_SetPinInterruptConfig(JOYSTICK_JS_RIGHT_PORT, JOYSTICK_JS_RIGHT_PIN, kPORT_InterruptOrDMADisabled);
 
     PORTB->PCR[0] = ((PORTB->PCR[0] &
                       /* Mask bits to zero which are setting */
@@ -248,8 +248,8 @@ void Joystick(void)
     /* PORTB1 (pin 54) is configured as PTB1 */
     PORT_SetPinMux(JOYSTICK_JS_DOWN_PORT, JOYSTICK_JS_DOWN_PIN, kPORT_MuxAsGpio);
 
-    /* Interrupt configuration on PORTB1 (pin 54): DMA request on rising edge */
-    PORT_SetPinInterruptConfig(JOYSTICK_JS_DOWN_PORT, JOYSTICK_JS_DOWN_PIN, kPORT_DMARisingEdge);
+    /* Interrupt configuration on PORTB1 (pin 54): Interrupt/DMA request is disabled */
+    PORT_SetPinInterruptConfig(JOYSTICK_JS_DOWN_PORT, JOYSTICK_JS_DOWN_PIN, kPORT_InterruptOrDMADisabled);
 
     PORTB->PCR[1] = ((PORTB->PCR[1] &
                       /* Mask bits to zero which are setting */
@@ -266,8 +266,8 @@ void Joystick(void)
     /* PORTB2 (pin 55) is configured as PTB2 */
     PORT_SetPinMux(JOYSTICK_JS_UP_PORT, JOYSTICK_JS_UP_PIN, kPORT_MuxAsGpio);
 
-    /* Interrupt configuration on PORTB2 (pin 55): DMA request on rising edge */
-    PORT_SetPinInterruptConfig(JOYSTICK_JS_UP_PORT, JOYSTICK_JS_UP_PIN, kPORT_DMARisingEdge);
+    /* Interrupt configuration on PORTB2 (pin 55): Interrupt/DMA request is disabled */
+    PORT_SetPinInterruptConfig(JOYSTICK_JS_UP_PORT, JOYSTICK_JS_UP_PIN, kPORT_InterruptOrDMADisabled);
 
     PORTB->PCR[2] = ((PORTB->PCR[2] &
                       /* Mask bits to zero which are setting */
@@ -284,8 +284,8 @@ void Joystick(void)
     /* PORTB3 (pin 56) is configured as PTB3 */
     PORT_SetPinMux(JOYSTICK_JS_PUSH_PORT, JOYSTICK_JS_PUSH_PIN, kPORT_MuxAsGpio);
 
-    /* Interrupt configuration on PORTB3 (pin 56): DMA request on rising edge */
-    PORT_SetPinInterruptConfig(JOYSTICK_JS_PUSH_PORT, JOYSTICK_JS_PUSH_PIN, kPORT_DMARisingEdge);
+    /* Interrupt configuration on PORTB3 (pin 56): Interrupt/DMA request is disabled */
+    PORT_SetPinInterruptConfig(JOYSTICK_JS_PUSH_PORT, JOYSTICK_JS_PUSH_PIN, kPORT_InterruptOrDMADisabled);
 
     PORTB->PCR[3] = ((PORTB->PCR[3] &
                       /* Mask bits to zero which are setting */
@@ -302,8 +302,8 @@ void Joystick(void)
     /* PORTB9 (pin 57) is configured as PTB9 */
     PORT_SetPinMux(JOYSTICK_JS_LEFT_PORT, JOYSTICK_JS_LEFT_PIN, kPORT_MuxAsGpio);
 
-    /* Interrupt configuration on PORTB9 (pin 57): DMA request on rising edge */
-    PORT_SetPinInterruptConfig(JOYSTICK_JS_LEFT_PORT, JOYSTICK_JS_LEFT_PIN, kPORT_DMARisingEdge);
+    /* Interrupt configuration on PORTB9 (pin 57): Interrupt/DMA request is disabled */
+    PORT_SetPinInterruptConfig(JOYSTICK_JS_LEFT_PORT, JOYSTICK_JS_LEFT_PIN, kPORT_InterruptOrDMADisabled);
 
     PORTB->PCR[9] = ((PORTB->PCR[9] &
                       /* Mask bits to zero which are setting */

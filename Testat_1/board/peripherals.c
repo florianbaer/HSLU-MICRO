@@ -12,7 +12,7 @@ package_id: MK22FN512VLL12
 mcu_data: ksdk2_0
 processor_version: 7.0.1
 functionalGroups:
-- name: BOARD_InitPeripherals
+- name: BOARD_JOYSTICK
   UUID: c97073be-aa70-405e-97de-43f88134fd59
   called_from_default_init: true
   selectedCore: core0
@@ -39,7 +39,7 @@ component:
 #include "peripherals.h"
 
 /***********************************************************************************************************************
- * BOARD_InitPeripherals functional group
+ * BOARD_JOYSTICK functional group
  **********************************************************************************************************************/
 /***********************************************************************************************************************
  * GPIOB initialization code
@@ -52,7 +52,7 @@ instance:
 - mode: 'GPIO'
 - custom_name_enabled: 'false'
 - type_id: 'gpio_5920c5e026e8e974e6dc54fbd5e22ad7'
-- functional_group: 'BOARD_InitPeripherals'
+- functional_group: 'BOARD_JOYSTICK'
 - peripheral: 'GPIOB'
 - config_sets:
   - fsl_gpio:
@@ -74,7 +74,7 @@ void GPIOB_init(void) {
 /***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
-void BOARD_InitPeripherals(void)
+void BOARD_JOYSTICK(void)
 {
   /* Initialize components */
   GPIOB_init();
@@ -85,5 +85,5 @@ void BOARD_InitPeripherals(void)
  **********************************************************************************************************************/
 void BOARD_InitBootPeripherals(void)
 {
-  BOARD_InitPeripherals();
+  BOARD_JOYSTICK();
 }
