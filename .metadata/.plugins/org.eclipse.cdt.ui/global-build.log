@@ -503,3 +503,665 @@ arm-none-eabi-size "LED_Blinken.axf"; # arm-none-eabi-objcopy -v -O binary "LED_
    text	   data	    bss	    dec	    hex	filename
    7536	     12	   8396	  15944	   3e48	LED_Blinken.axf
  
+20:09:16 **** Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+Building file: ../startup/startup_mk22f51212.c
+Building file: ../source/Car_Joystick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_mk22f51212.d" -MT"startup/startup_mk22f51212.o" -MT"startup/startup_mk22f51212.d" -o "startup/startup_mk22f51212.o" "../startup/startup_mk22f51212.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Car_Joystick.d" -MT"source/Car_Joystick.o" -MT"source/Car_Joystick.d" -o "source/Car_Joystick.o" "../source/Car_Joystick.c"
+Finished building: ../source/Car_Joystick.c
+Finished building: ../startup/startup_mk22f51212.c
+ 
+ 
+Building file: ../source/Car_LEDS.c
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Car_LEDS.d" -MT"source/Car_LEDS.o" -MT"source/Car_LEDS.d" -o "source/Car_LEDS.o" "../source/Car_LEDS.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+In file included from ../source/Car_LEDS.c:8:
+/home/hslu/hslu-micro/Testat1/source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+/home/hslu/hslu-micro/Testat1/source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../source/Car_LEDS.c
+ 
+Building file: ../source/GPIO_Toggler.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/GPIO_Toggler.d" -MT"source/GPIO_Toggler.o" -MT"source/GPIO_Toggler.d" -o "source/GPIO_Toggler.o" "../source/GPIO_Toggler.c"
+Finished building: ../source/Delay.c
+ 
+Building file: ../source/LEDS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LEDS.d" -MT"source/LEDS.o" -MT"source/LEDS.d" -o "source/LEDS.o" "../source/LEDS.c"
+In file included from ../source/LEDS.c:12:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../source/GPIO_Toggler.c
+ 
+Building file: ../source/Testat1.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Testat1.d" -MT"source/Testat1.o" -MT"source/Testat1.d" -o "source/Testat1.o" "../source/Testat1.c"
+Finished building: ../source/LEDS.c
+ 
+Building file: ../source/semihost_hardfault.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/Testat1.c:21:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../source/semihost_hardfault.c
+ 
+Building file: ../source/structs.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/structs.d" -MT"source/structs.o" -MT"source/structs.d" -o "source/structs.o" "../source/structs.c"
+Finished building: ../source/Testat1.c
+ 
+Building file: ../drivers/freertos/fsl_uart_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/freertos/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/freertos/fsl_uart_freertos.d" -MT"drivers/freertos/fsl_uart_freertos.o" -MT"drivers/freertos/fsl_uart_freertos.d" -o "drivers/freertos/fsl_uart_freertos.o" "../drivers/freertos/fsl_uart_freertos.c"
+In file included from ../source/structs.c:8:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/structs.c:10:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ InitalizeCounter(led_counter_t *counter){
+ ^~~~~~~~~~~~~~~~
+../source/structs.c: In function 'InitalizeCounter':
+../source/structs.c:19:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../source/structs.c
+ 
+Building file: ../drivers/fsl_clock.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+Finished building: ../drivers/freertos/fsl_uart_freertos.c
+ 
+Building file: ../drivers/fsl_common.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
+Finished building: ../drivers/fsl_clock.c
+ 
+Building file: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
+Finished building: ../drivers/fsl_common.c
+ 
+Building file: ../drivers/fsl_uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_uart.d" -MT"drivers/fsl_uart.o" -MT"drivers/fsl_uart.d" -o "drivers/fsl_uart.o" "../drivers/fsl_uart.c"
+Finished building: ../drivers/fsl_gpio.c
+ 
+Building file: ../device/system_MK22F51212.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_MK22F51212.d" -MT"device/system_MK22F51212.o" -MT"device/system_MK22F51212.d" -o "device/system_MK22F51212.o" "../device/system_MK22F51212.c"
+Finished building: ../drivers/fsl_uart.c
+ 
+Building file: ../component/lists/generic_list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/lists/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/lists/generic_list.d" -MT"component/lists/generic_list.o" -MT"component/lists/generic_list.d" -o "component/lists/generic_list.o" "../component/lists/generic_list.c"
+Finished building: ../device/system_MK22F51212.c
+ 
+Building file: ../board/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
+Finished building: ../board/board.c
+ 
+Building file: ../board/clock_config.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
+Finished building: ../component/lists/generic_list.c
+ 
+Building file: ../board/peripherals.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
+Finished building: ../board/peripherals.c
+ 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../board/clock_config.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/portable/MemMang/heap_4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/portable/MemMang/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/portable/MemMang/heap_4.d" -MT"amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o" -MT"amazon-freertos/freertos_kernel/portable/MemMang/heap_4.d" -o "amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o" "../amazon-freertos/freertos_kernel/portable/MemMang/heap_4.c"
+Finished building: ../amazon-freertos/freertos_kernel/portable/MemMang/heap_4.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.d" -MT"amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o" -MT"amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.d" -o "amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o" "../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.c"
+Finished building: ../board/pin_mux.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/event_groups.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/event_groups.d" -MT"amazon-freertos/freertos_kernel/event_groups.o" -MT"amazon-freertos/freertos_kernel/event_groups.d" -o "amazon-freertos/freertos_kernel/event_groups.o" "../amazon-freertos/freertos_kernel/event_groups.c"
+Finished building: ../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/list.d" -MT"amazon-freertos/freertos_kernel/list.o" -MT"amazon-freertos/freertos_kernel/list.d" -o "amazon-freertos/freertos_kernel/list.o" "../amazon-freertos/freertos_kernel/list.c"
+Finished building: ../amazon-freertos/freertos_kernel/event_groups.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/queue.d" -MT"amazon-freertos/freertos_kernel/queue.o" -MT"amazon-freertos/freertos_kernel/queue.d" -o "amazon-freertos/freertos_kernel/queue.o" "../amazon-freertos/freertos_kernel/queue.c"
+Finished building: ../amazon-freertos/freertos_kernel/list.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/stream_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/stream_buffer.d" -MT"amazon-freertos/freertos_kernel/stream_buffer.o" -MT"amazon-freertos/freertos_kernel/stream_buffer.d" -o "amazon-freertos/freertos_kernel/stream_buffer.o" "../amazon-freertos/freertos_kernel/stream_buffer.c"
+Finished building: ../amazon-freertos/freertos_kernel/stream_buffer.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/tasks.d" -MT"amazon-freertos/freertos_kernel/tasks.o" -MT"amazon-freertos/freertos_kernel/tasks.d" -o "amazon-freertos/freertos_kernel/tasks.o" "../amazon-freertos/freertos_kernel/tasks.c"
+Finished building: ../amazon-freertos/freertos_kernel/queue.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/timers.d" -MT"amazon-freertos/freertos_kernel/timers.o" -MT"amazon-freertos/freertos_kernel/timers.d" -o "amazon-freertos/freertos_kernel/timers.o" "../amazon-freertos/freertos_kernel/timers.c"
+Finished building: ../amazon-freertos/freertos_kernel/timers.c
+ 
+Finished building: ../amazon-freertos/freertos_kernel/tasks.c
+ 
+Building target: Testat1.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Testat1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T Testat1_Debug.ld -o "Testat1.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/Testat1.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/freertos/fsl_uart_freertos.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o ./drivers/fsl_uart.o  ./device/system_MK22F51212.o  ./component/lists/generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       22108 B       512 KB      4.22%
+      SRAM_UPPER:       19104 B        64 KB     29.15%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: Testat1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Testat1.axf"; # arm-none-eabi-objcopy -v -O binary "Testat1.axf" "Testat1.bin" ; # checksum -p MK22FN512xxx12 -d "Testat1.bin";
+   text	   data	    bss	    dec	    hex	filename
+  22100	      8	  19096	  41204	   a0f4	Testat1.axf
+ 
+20:09:21 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:11:11 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:11:58 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:12:41 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:13:00 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:14:29 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:14:56 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:16:10 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:16:58 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:17:30 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:18:01 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:18:24 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+20:18:48 **** Incremental Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+make: Für das Ziel „all“ ist nichts zu tun.
+18:40:46 **** Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../startup/startup_mk22f51212.c
+Building file: ../source/Car_Joystick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Car_Joystick.d" -MT"source/Car_Joystick.o" -MT"source/Car_Joystick.d" -o "source/Car_Joystick.o" "../source/Car_Joystick.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_mk22f51212.d" -MT"startup/startup_mk22f51212.o" -MT"startup/startup_mk22f51212.d" -o "startup/startup_mk22f51212.o" "../startup/startup_mk22f51212.c"
+Finished building: ../source/Car_Joystick.c
+ 
+Building file: ../source/Car_LEDS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Car_LEDS.d" -MT"source/Car_LEDS.o" -MT"source/Car_LEDS.d" -o "source/Car_LEDS.o" "../source/Car_LEDS.c"
+Finished building: ../startup/startup_mk22f51212.c
+ 
+Building file: ../source/Delay.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Delay.d" -MT"source/Delay.o" -MT"source/Delay.d" -o "source/Delay.o" "../source/Delay.c"
+In file included from ../source/Car_LEDS.c:8:
+/home/hslu/hslu-micro/SW09/source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+/home/hslu/hslu-micro/SW09/source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../source/Car_LEDS.c
+ 
+Building file: ../source/GPIO_Toggler.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/GPIO_Toggler.d" -MT"source/GPIO_Toggler.o" -MT"source/GPIO_Toggler.d" -o "source/GPIO_Toggler.o" "../source/GPIO_Toggler.c"
+Finished building: ../source/Delay.c
+ 
+Building file: ../source/LEDS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LEDS.d" -MT"source/LEDS.o" -MT"source/LEDS.d" -o "source/LEDS.o" "../source/LEDS.c"
+In file included from ../source/LEDS.c:12:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../source/GPIO_Toggler.c
+ 
+Building file: ../source/SW09.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+Finished building: ../source/LEDS.c
+ 
+Building file: ../source/semihost_hardfault.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/semihost_hardfault.d" -MT"source/semihost_hardfault.o" -MT"source/semihost_hardfault.d" -o "source/semihost_hardfault.o" "../source/semihost_hardfault.c"
+Finished building: ../source/semihost_hardfault.c
+ 
+Building file: ../source/structs.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/structs.d" -MT"source/structs.o" -MT"source/structs.d" -o "source/structs.o" "../source/structs.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:21:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+In file included from ../source/structs.c:8:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/structs.c:10:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ InitalizeCounter(led_counter_t *counter){
+ ^~~~~~~~~~~~~~~~
+../source/structs.c: In function 'InitalizeCounter':
+../source/structs.c:19:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../source/SW09.c: In function 'app_print_counter_task':
+../source/SW09.c:117:18: error: 'ADC_CH_TEMPERATURE' undeclared (first use in this function)
+   ADC1->SC1[0] = ADC_CH_TEMPERATURE; // Temperature
+                  ^~~~~~~~~~~~~~~~~~
+../source/SW09.c:117:18: note: each undeclared identifier is reported only once for each function it appears in
+../source/SW09.c:121:3: error: 'voltage' undeclared (first use in this function)
+   voltage = adcvalue * 3300000 / 65535;
+   ^~~~~~~
+../source/SW09.c: In function 'main':
+../source/SW09.c:168:23: error: unknown type name 'c'
+  &joystickTaskHandle);c
+                       ^
+../source/SW09.c:170:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'printTaskHandle'
+  TaskHandle_t printTaskHandle;
+               ^~~~~~~~~~~~~~~
+Finished building: ../source/structs.c
+ 
+Building file: ../drivers/fsl_adc16.c
+Invoking: MCU C Compiler
+../source/SW09.c:176:6: error: 'printTaskHandle' undeclared (first use in this function); did you mean 'xTaskHandle'?
+     &printTaskHandle);
+      ^~~~~~~~~~~~~~~
+      xTaskHandle
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_adc16.d" -MT"drivers/fsl_adc16.o" -MT"drivers/fsl_adc16.d" -o "drivers/fsl_adc16.o" "../drivers/fsl_adc16.c"
+source/subdir.mk:39: recipe for target 'source/SW09.o' failed
+make: *** [source/SW09.o] Error 1
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+Finished building: ../drivers/fsl_adc16.c
+ 
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+18:48:11 **** Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../source/SW09.c
+Building file: ../drivers/fsl_clock.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_clock.d" -MT"drivers/fsl_clock.o" -MT"drivers/fsl_clock.d" -o "drivers/fsl_clock.o" "../drivers/fsl_clock.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:21:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/SW09.c: In function 'main':
+../source/SW09.c:168:23: error: unknown type name 'c'
+  &joystickTaskHandle);c
+                       ^
+../source/SW09.c:170:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'printTaskHandle'
+  TaskHandle_t printTaskHandle;
+               ^~~~~~~~~~~~~~~
+../source/SW09.c:176:6: error: 'printTaskHandle' undeclared (first use in this function); did you mean 'xTaskHandle'?
+     &printTaskHandle);
+      ^~~~~~~~~~~~~~~
+      xTaskHandle
+../source/SW09.c:176:6: note: each undeclared identifier is reported only once for each function it appears in
+source/subdir.mk:39: recipe for target 'source/SW09.o' failed
+make: *** [source/SW09.o] Error 1
+make: *** Auf noch nicht beendete Prozesse wird gewartet …
+Finished building: ../drivers/fsl_clock.c
+ 
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+18:48:32 **** Build of configuration Debug for project Testat1 ****
+make -r -j2 all 
+Building file: ../source/Testat1.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/Testat1/board" -I"/home/hslu/hslu-micro/Testat1/source" -I"/home/hslu/hslu-micro/Testat1" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/Testat1/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/Testat1/drivers" -I"/home/hslu/hslu-micro/Testat1/device" -I"/home/hslu/hslu-micro/Testat1/CMSIS" -I"/home/hslu/hslu-micro/Testat1/drivers/freertos" -I"/home/hslu/hslu-micro/Testat1/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Testat1.d" -MT"source/Testat1.o" -MT"source/Testat1.d" -o "source/Testat1.o" "../source/Testat1.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/Testat1.c:21:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../source/Testat1.c
+ 
+Building target: Testat1.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Testat1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T Testat1_Debug.ld -o "Testat1.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/Testat1.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/freertos/fsl_uart_freertos.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_gpio.o ./drivers/fsl_uart.o  ./device/system_MK22F51212.o  ./component/lists/generic_list.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       22108 B       512 KB      4.22%
+      SRAM_UPPER:       19104 B        64 KB     29.15%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: Testat1.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Testat1.axf"; # arm-none-eabi-objcopy -v -O binary "Testat1.axf" "Testat1.bin" ; # checksum -p MK22FN512xxx12 -d "Testat1.bin";
+   text	   data	    bss	    dec	    hex	filename
+  22100	      8	  19096	  41204	   a0f4	Testat1.axf
+ 
+18:49:29 **** Incremental Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../source/SW09.c
+Building file: ../drivers/fsl_common.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_common.d" -MT"drivers/fsl_common.o" -MT"drivers/fsl_common.d" -o "drivers/fsl_common.o" "../drivers/fsl_common.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:21:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+Finished building: ../drivers/fsl_common.c
+ 
+Building file: ../drivers/fsl_ftm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_ftm.d" -MT"drivers/fsl_ftm.o" -MT"drivers/fsl_ftm.d" -o "drivers/fsl_ftm.o" "../drivers/fsl_ftm.c"
+Finished building: ../source/SW09.c
+ 
+Building file: ../drivers/fsl_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/fsl_gpio.d" -MT"drivers/fsl_gpio.o" -MT"drivers/fsl_gpio.d" -o "drivers/fsl_gpio.o" "../drivers/fsl_gpio.c"
+Finished building: ../drivers/fsl_ftm.c
+ 
+Building file: ../device/system_MK22F51212.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../device/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"device/system_MK22F51212.d" -MT"device/system_MK22F51212.o" -MT"device/system_MK22F51212.d" -o "device/system_MK22F51212.o" "../device/system_MK22F51212.c"
+Finished building: ../drivers/fsl_gpio.c
+ 
+Building file: ../component/timer/ftm_adapter.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/timer/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/timer/ftm_adapter.d" -MT"component/timer/ftm_adapter.o" -MT"component/timer/ftm_adapter.d" -o "component/timer/ftm_adapter.o" "../component/timer/ftm_adapter.c"
+Finished building: ../device/system_MK22F51212.c
+ 
+Building file: ../component/lists/generic_list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/lists/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/lists/generic_list.d" -MT"component/lists/generic_list.o" -MT"component/lists/generic_list.d" -o "component/lists/generic_list.o" "../component/lists/generic_list.c"
+Finished building: ../component/timer/ftm_adapter.c
+ 
+Building file: ../component/gpio/gpio_adapter.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/gpio/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/gpio/gpio_adapter.d" -MT"component/gpio/gpio_adapter.o" -MT"component/gpio/gpio_adapter.d" -o "component/gpio/gpio_adapter.o" "../component/gpio/gpio_adapter.c"
+Finished building: ../component/lists/generic_list.c
+ 
+Building file: ../board/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/board.d" -MT"board/board.o" -MT"board/board.d" -o "board/board.o" "../board/board.c"
+Finished building: ../board/board.c
+ 
+Building file: ../board/clock_config.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/clock_config.d" -MT"board/clock_config.o" -MT"board/clock_config.d" -o "board/clock_config.o" "../board/clock_config.c"
+Finished building: ../component/gpio/gpio_adapter.c
+ 
+Building file: ../board/peripherals.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
+Finished building: ../board/clock_config.c
+ 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../board/peripherals.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/portable/MemMang/heap_4.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/portable/MemMang/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/portable/MemMang/heap_4.d" -MT"amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o" -MT"amazon-freertos/freertos_kernel/portable/MemMang/heap_4.d" -o "amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o" "../amazon-freertos/freertos_kernel/portable/MemMang/heap_4.c"
+Finished building: ../board/pin_mux.c
+Finished building: ../amazon-freertos/freertos_kernel/portable/MemMang/heap_4.c
+ 
+ 
+Building file: ../amazon-freertos/freertos_kernel/event_groups.c
+Building file: ../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.d" -MT"amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o" -MT"amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.d" -o "amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o" "../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.c"
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/event_groups.d" -MT"amazon-freertos/freertos_kernel/event_groups.o" -MT"amazon-freertos/freertos_kernel/event_groups.d" -o "amazon-freertos/freertos_kernel/event_groups.o" "../amazon-freertos/freertos_kernel/event_groups.c"
+Finished building: ../amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/list.d" -MT"amazon-freertos/freertos_kernel/list.o" -MT"amazon-freertos/freertos_kernel/list.d" -o "amazon-freertos/freertos_kernel/list.o" "../amazon-freertos/freertos_kernel/list.c"
+Finished building: ../amazon-freertos/freertos_kernel/event_groups.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/queue.d" -MT"amazon-freertos/freertos_kernel/queue.o" -MT"amazon-freertos/freertos_kernel/queue.d" -o "amazon-freertos/freertos_kernel/queue.o" "../amazon-freertos/freertos_kernel/queue.c"
+Finished building: ../amazon-freertos/freertos_kernel/list.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/stream_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/stream_buffer.d" -MT"amazon-freertos/freertos_kernel/stream_buffer.o" -MT"amazon-freertos/freertos_kernel/stream_buffer.d" -o "amazon-freertos/freertos_kernel/stream_buffer.o" "../amazon-freertos/freertos_kernel/stream_buffer.c"
+Finished building: ../amazon-freertos/freertos_kernel/queue.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/tasks.d" -MT"amazon-freertos/freertos_kernel/tasks.o" -MT"amazon-freertos/freertos_kernel/tasks.d" -o "amazon-freertos/freertos_kernel/tasks.o" "../amazon-freertos/freertos_kernel/tasks.c"
+Finished building: ../amazon-freertos/freertos_kernel/stream_buffer.c
+ 
+Building file: ../amazon-freertos/freertos_kernel/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../amazon-freertos/freertos_kernel/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"amazon-freertos/freertos_kernel/timers.d" -MT"amazon-freertos/freertos_kernel/timers.o" -MT"amazon-freertos/freertos_kernel/timers.d" -o "amazon-freertos/freertos_kernel/timers.o" "../amazon-freertos/freertos_kernel/timers.c"
+Finished building: ../amazon-freertos/freertos_kernel/timers.c
+ 
+Finished building: ../amazon-freertos/freertos_kernel/tasks.c
+ 
+Building target: SW09.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="SW09.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T SW09_Debug.ld -o "SW09.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/SW09.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./component/timer/ftm_adapter.o  ./component/lists/generic_list.o  ./component/gpio/gpio_adapter.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       23956 B       512 KB      4.57%
+      SRAM_UPPER:       19132 B        64 KB     29.19%
+/usr/local/mcuxpressoide-11.1.0_3209/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.1.0.201909161352/tools/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/bin/ld: ./component/gpio/gpio_adapter.o: in function `PORTB_IRQHandler':
+/home/hslu/hslu-micro/SW09/Debug/../component/gpio/gpio_adapter.c:204: multiple definition of `PORTB_IRQHandler'; ./source/SW09.o:/home/hslu/hslu-micro/SW09/Debug/../source/SW09.c:65: first defined here
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+makefile:40: recipe for target 'SW09.axf' failed
+collect2: error: ld returned 1 exit status
+make: *** [SW09.axf] Error 1
+"make -r -j2 all" terminated with exit code 2. Build might be incomplete.
+19:00:47 **** Incremental Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../component/gpio/gpio_adapter.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../component/gpio/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"component/gpio/gpio_adapter.d" -MT"component/gpio/gpio_adapter.o" -MT"component/gpio/gpio_adapter.d" -o "component/gpio/gpio_adapter.o" "../component/gpio/gpio_adapter.c"
+Finished building: ../component/gpio/gpio_adapter.c
+ 
+Building target: SW09.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="SW09.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T SW09_Debug.ld -o "SW09.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/SW09.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./component/timer/ftm_adapter.o  ./component/lists/generic_list.o  ./component/gpio/gpio_adapter.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       23956 B       512 KB      4.57%
+      SRAM_UPPER:       19132 B        64 KB     29.19%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: SW09.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SW09.axf"; # arm-none-eabi-objcopy -v -O binary "SW09.axf" "SW09.bin" ; # checksum -p MK22FN512xxx12 -d "SW09.bin";
+   text	   data	    bss	    dec	    hex	filename
+  23924	     32	  19100	  43056	   a830	SW09.axf
+ 
+19:05:47 **** Incremental Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../source/SW09.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:21:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/SW09.c: In function 'app_print_counter_task':
+../source/SW09.c:123:12: warning: unused variable 'temp' [-Wunused-variable]
+   uint32_t temp = 250 - ((voltage - 716000) / 162);
+            ^~~~
+../source/SW09.c:121:12: warning: unused variable 'tens' [-Wunused-variable]
+   uint32_t tens = voltage * 37 / 10000;
+            ^~~~
+Finished building: ../source/SW09.c
+ 
+Building target: SW09.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="SW09.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T SW09_Debug.ld -o "SW09.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/SW09.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./component/timer/ftm_adapter.o  ./component/lists/generic_list.o  ./component/gpio/gpio_adapter.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       24012 B       512 KB      4.58%
+      SRAM_UPPER:       19132 B        64 KB     29.19%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: SW09.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SW09.axf"; # arm-none-eabi-objcopy -v -O binary "SW09.axf" "SW09.bin" ; # checksum -p MK22FN512xxx12 -d "SW09.bin";
+   text	   data	    bss	    dec	    hex	filename
+  23980	     32	  19100	  43112	   a868	SW09.axf
+ 
+20:54:29 **** Incremental Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../source/SW09.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:22:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/SW09.c: In function 'app_print_counter_task':
+../source/SW09.c:124:12: warning: unused variable 'temp' [-Wunused-variable]
+   uint32_t temp = 250 - ((voltage - 716000) / 162);
+            ^~~~
+../source/SW09.c:123:12: warning: unused variable 'tens' [-Wunused-variable]
+   uint32_t tens = voltage * 37 / 10000;
+            ^~~~
+Finished building: ../source/SW09.c
+ 
+Building target: SW09.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="SW09.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T SW09_Debug.ld -o "SW09.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/SW09.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./component/timer/ftm_adapter.o  ./component/lists/generic_list.o  ./component/gpio/gpio_adapter.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       24012 B       512 KB      4.58%
+      SRAM_UPPER:       19132 B        64 KB     29.19%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: SW09.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SW09.axf"; # arm-none-eabi-objcopy -v -O binary "SW09.axf" "SW09.bin" ; # checksum -p MK22FN512xxx12 -d "SW09.bin";
+   text	   data	    bss	    dec	    hex	filename
+  23980	     32	  19100	  43112	   a868	SW09.axf
+ 
+20:58:10 **** Incremental Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../source/SW09.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:23:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/SW09.c: In function 'app_print_counter_task':
+../source/SW09.c:124:12: warning: unused variable 'tens' [-Wunused-variable]
+   uint32_t tens = voltage * 37 / 10000;
+            ^~~~
+Finished building: ../source/SW09.c
+ 
+Building target: SW09.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="SW09.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T SW09_Debug.ld -o "SW09.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/SW09.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./component/timer/ftm_adapter.o  ./component/lists/generic_list.o  ./component/gpio/gpio_adapter.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       24052 B       512 KB      4.59%
+      SRAM_UPPER:       19132 B        64 KB     29.19%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: SW09.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SW09.axf"; # arm-none-eabi-objcopy -v -O binary "SW09.axf" "SW09.bin" ; # checksum -p MK22FN512xxx12 -d "SW09.bin";
+   text	   data	    bss	    dec	    hex	filename
+  24020	     32	  19100	  43152	   a890	SW09.axf
+ 
+21:00:03 **** Incremental Build of configuration Debug for project SW09 ****
+make -r -j2 all 
+Building file: ../source/SW09.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MK22FN512VLL12 -DCPU_MK22FN512VLL12_cm4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -DFSL_RTOS_FREE_RTOS -DSDK_OS_FREE_RTOS -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"/home/hslu/hslu-micro/SW09/board" -I"/home/hslu/hslu-micro/SW09/source" -I"/home/hslu/hslu-micro/SW09" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/include" -I"/home/hslu/hslu-micro/SW09/amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F" -I"/home/hslu/hslu-micro/SW09/drivers" -I"/home/hslu/hslu-micro/SW09/device" -I"/home/hslu/hslu-micro/SW09/CMSIS" -I"/home/hslu/hslu-micro/SW09/component/timer" -I"/home/hslu/hslu-micro/SW09/component/gpio" -I"/home/hslu/hslu-micro/SW09/component/lists" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"=. -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SW09.d" -MT"source/SW09.o" -MT"source/SW09.d" -o "source/SW09.o" "../source/SW09.c"
+In file included from ../source/Car_LEDS.h:10,
+                 from ../source/SW09.c:23:
+../source/structs.h:50:1: warning: data definition has no type or storage class
+ InitalizeCounter(led_counter_t *counter);
+ ^~~~~~~~~~~~~~~~
+../source/structs.h:50:1: warning: type defaults to 'int' in declaration of 'InitalizeCounter' [-Wimplicit-int]
+../source/SW09.c: In function 'app_print_counter_task':
+../source/SW09.c:124:12: warning: unused variable 'tens' [-Wunused-variable]
+   uint32_t tens = voltage * 37 / 10000;
+            ^~~~
+Finished building: ../source/SW09.c
+ 
+Building target: SW09.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="SW09.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T SW09_Debug.ld -o "SW09.axf"  ./startup/startup_mk22f51212.o  ./source/Car_Joystick.o ./source/Car_LEDS.o ./source/Delay.o ./source/GPIO_Toggler.o ./source/LEDS.o ./source/SW09.o ./source/semihost_hardfault.o ./source/structs.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_ftm.o ./drivers/fsl_gpio.o  ./device/system_MK22F51212.o  ./component/timer/ftm_adapter.o  ./component/lists/generic_list.o  ./component/gpio/gpio_adapter.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o  ./amazon-freertos/freertos_kernel/portable/MemMang/heap_4.o  ./amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o  ./amazon-freertos/freertos_kernel/event_groups.o ./amazon-freertos/freertos_kernel/list.o ./amazon-freertos/freertos_kernel/queue.o ./amazon-freertos/freertos_kernel/stream_buffer.o ./amazon-freertos/freertos_kernel/tasks.o ./amazon-freertos/freertos_kernel/timers.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       24052 B       512 KB      4.59%
+      SRAM_UPPER:       19132 B        64 KB     29.19%
+      SRAM_LOWER:          0 GB        64 KB      0.00%
+Finished building target: SW09.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "SW09.axf"; # arm-none-eabi-objcopy -v -O binary "SW09.axf" "SW09.bin" ; # checksum -p MK22FN512xxx12 -d "SW09.bin";
+   text	   data	    bss	    dec	    hex	filename
+  24020	     32	  19100	  43152	   a890	SW09.axf
+ 

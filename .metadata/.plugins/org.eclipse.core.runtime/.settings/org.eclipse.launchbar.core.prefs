@@ -1,7 +1,9 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_Blinken JLink Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Testat1 JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SW09 JLink Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World\ JLink\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Hello_World\ JLink\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Testat1\ JLink\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Testat1\ JLink\ Debug/activeLaunchTarget=null\:---

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2020, Lucerne University of Applied Sciences and Arts.
- * @author Lucien Zuercher <lucien.zuercher@stud.hslu.ch>
+ * @author Florian Bär
  */
 
 /**

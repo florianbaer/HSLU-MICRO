@@ -26,6 +26,7 @@ pin_labels:
 - {pin_num: '55', pin_signal: ADC0_SE12/PTB2/I2C0_SCL/UART0_RTS_b/FTM0_FLT3, label: JS_UP, identifier: JS_UP}
 - {pin_num: '56', pin_signal: ADC0_SE13/PTB3/I2C0_SDA/UART0_CTS_b/FTM0_FLT0, label: JS_PUSH, identifier: JS_PUSH}
 - {pin_num: '57', pin_signal: PTB9/SPI1_PCS1/LPUART0_CTS_b/FB_AD20, label: JS_LEFT, identifier: JS_LEFT}
+- {pin_num: '21', pin_signal: ADC1_DM0/ADC0_DM3, label: test, identifier: test}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
