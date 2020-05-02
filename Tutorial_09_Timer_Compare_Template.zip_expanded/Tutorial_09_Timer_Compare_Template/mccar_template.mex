@@ -603,7 +603,7 @@
             <component name="system" uuid="eecb93b7-e21b-43dc-85a7-36a3269a4c36" type_id="system_54b53072540eeeb8f8e9343e71f28176">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="e5cfca80-6e7c-495d-b6bf-4b66ef353d1d" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="5690efe6-6ba8-4ca4-a980-2a5ed080c7fe" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>
