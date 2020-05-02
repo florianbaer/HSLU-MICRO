@@ -42,18 +42,6 @@ extern "C" {
 #define UART0_2_PERIPHERAL UART0
 /* Definition of the clock source frequency */
 #define UART0_2_CLOCK_SOURCE CLOCK_GetFreq(UART0_CLK_SRC)
-/* UART0_2 interrupt vector ID (number). */
-#define UART0_2_SERIAL_RX_TX_IRQN UART0_RX_TX_IRQn
-/* UART0_2 interrupt vector priority. */
-#define UART0_2_SERIAL_RX_TX_IRQ_PRIORITY 8
-/* UART0_2 interrupt handler identifier. */
-#define UART0_2_SERIAL_RX_TX_IRQHANDLER UART0_RX_TX_IRQHandler
-/* UART0_2 interrupt vector ID (number). */
-#define UART0_2_SERIAL_ERROR_IRQN UART0_ERR_IRQn
-/* UART0_2 interrupt vector priority. */
-#define UART0_2_SERIAL_ERROR_IRQ_PRIORITY 8
-/* UART0_2 interrupt handler identifier. */
-#define UART0_2_SERIAL_ERROR_IRQHANDLER UART0_ERR_IRQHandler
 
 /* Definitions for BOARD_InitUart0 functional group */
 /* Definition of peripheral ID */

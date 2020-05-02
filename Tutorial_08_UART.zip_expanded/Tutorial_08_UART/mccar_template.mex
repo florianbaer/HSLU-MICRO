@@ -313,6 +313,8 @@
                   </pin>
                   <pin peripheral="UART0" signal="TX" pin_num="36" pin_signal="PTA2/UART0_TX/FTM0_CH7/JTAG_TDO/TRACE_SWO/EZP_DO">
                      <pin_features>
+                        <pin_feature name="identifier" value="BOARD_UART0_TX"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="open_drain" value="enable"/>
                      </pin_features>
                   </pin>
@@ -508,7 +510,7 @@
                         </struct>
                      </config_set>
                   </instance>
-                  <instance name="UART0_2" uuid="52931d79-0b32-4ff5-b6ce-1bdc90e99b32" type="uart" type_id="uart_88ab1eca0cddb7ee407685775de016d5" mode="interrupts" peripheral="UART0" enabled="true" comment="" custom_name_enabled="false">
+                  <instance name="UART0_2" uuid="57cad55e-251b-447a-8e0b-b4c92462e003" type="uart" type_id="uart_88ab1eca0cddb7ee407685775de016d5" mode="polling" peripheral="UART0" enabled="true" comment="" custom_name_enabled="false">
                      <config_set name="uartConfig_t" quick_selection="QuickSelection1">
                         <struct name="uartConfig">
                            <setting name="clockSource" value="BusInterfaceClock"/>
@@ -520,33 +522,6 @@
                            <setting name="idleType" value="kUART_IdleTypeStartBit"/>
                            <setting name="enableTx" value="true"/>
                            <setting name="enableRx" value="true"/>
-                        </struct>
-                     </config_set>
-                     <config_set name="interruptsCfg">
-                        <set name="interrupts">
-                           <selected>
-                              <id>kUART_RxDataRegFullInterruptEnable</id>
-                              <id>kUART_RxOverrunInterruptEnable</id>
-                              <id>kUART_NoiseErrorInterruptEnable</id>
-                              <id>kUART_FramingErrorInterruptEnable</id>
-                              <id>kUART_RxFifoOverflowInterruptEnable</id>
-                           </selected>
-                        </set>
-                        <struct name="interrupt_vectors">
-                           <setting name="enable_rx_tx_irq" value="true"/>
-                           <struct name="interrupt_rx_tx">
-                              <setting name="IRQn" value="UART0_RX_TX_IRQn"/>
-                              <setting name="enable_priority" value="true"/>
-                              <setting name="priority" value="8"/>
-                              <setting name="enable_custom_name" value="false"/>
-                           </struct>
-                           <setting name="enable_err_irq" value="true"/>
-                           <struct name="interrupt_err">
-                              <setting name="IRQn" value="UART0_ERR_IRQn"/>
-                              <setting name="enable_priority" value="true"/>
-                              <setting name="priority" value="8"/>
-                              <setting name="enable_custom_name" value="false"/>
-                           </struct>
                         </struct>
                      </config_set>
                   </instance>
@@ -574,7 +549,7 @@
                </dependencies>
                <instances>
                   <instance name="UART0" uuid="5e3fd5b0-6d2c-47da-8fcc-a88edc8cd6e7" type="uart" type_id="uart_88ab1eca0cddb7ee407685775de016d5" mode="interrupts" peripheral="UART0" enabled="true" comment="" custom_name_enabled="false">
-                     <config_set name="uartConfig_t">
+                     <config_set name="uartConfig_t" quick_selection="QuickSelection4">
                         <struct name="uartConfig">
                            <setting name="clockSource" value="BusInterfaceClock"/>
                            <setting name="clockSourceFreq" value="GetFreq"/>
@@ -590,16 +565,11 @@
                      <config_set name="interruptsCfg">
                         <set name="interrupts">
                            <selected>
-                              <id>kUART_TxDataRegEmptyInterruptEnable</id>
-                              <id>kUART_TransmissionCompleteInterruptEnable</id>
                               <id>kUART_RxDataRegFullInterruptEnable</id>
                               <id>kUART_RxOverrunInterruptEnable</id>
                               <id>kUART_NoiseErrorInterruptEnable</id>
                               <id>kUART_FramingErrorInterruptEnable</id>
-                              <id>kUART_ParityErrorInterruptEnable</id>
                               <id>kUART_RxFifoOverflowInterruptEnable</id>
-                              <id>kUART_TxFifoOverflowInterruptEnable</id>
-                              <id>kUART_RxFifoUnderflowInterruptEnable</id>
                            </selected>
                         </set>
                         <struct name="interrupt_vectors">
@@ -627,7 +597,7 @@
             <component name="system" uuid="eecb93b7-e21b-43dc-85a7-36a3269a4c36" type_id="system_54b53072540eeeb8f8e9343e71f28176">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="98bf703d-235c-4dd0-92ca-978251226a1b" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="90cf3fdd-b79e-436b-a2b2-d8ba357415ef" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>

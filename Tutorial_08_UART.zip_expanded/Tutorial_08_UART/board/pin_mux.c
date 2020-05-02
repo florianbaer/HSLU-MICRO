@@ -522,7 +522,7 @@ BOARD_UART:
 - options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: '35', peripheral: UART0, signal: RX, pin_signal: PTA1/UART0_RX/FTM0_CH6/JTAG_TDI/EZP_DI, identifier: BOARD_UART0_RX, open_drain: enable}
-  - {pin_num: '36', peripheral: UART0, signal: TX, pin_signal: PTA2/UART0_TX/FTM0_CH7/JTAG_TDO/TRACE_SWO/EZP_DO, open_drain: enable}
+  - {pin_num: '36', peripheral: UART0, signal: TX, pin_signal: PTA2/UART0_TX/FTM0_CH7/JTAG_TDO/TRACE_SWO/EZP_DO, identifier: BOARD_UART0_TX, direction: OUTPUT, open_drain: enable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -550,7 +550,7 @@ void BOARD_UART(void)
                      | PORT_PCR_ODE(kPORT_OpenDrainEnable));
 
     /* PORTA2 (pin 36) is configured as UART0_TX */
-    PORT_SetPinMux(PORTA, 2U, kPORT_MuxAlt2);
+    PORT_SetPinMux(BOARD_UART_BOARD_UART0_TX_PORT, BOARD_UART_BOARD_UART0_TX_PIN, kPORT_MuxAlt2);
 
     PORTA->PCR[2] = ((PORTA->PCR[2] &
                       /* Mask bits to zero which are setting */

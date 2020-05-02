@@ -198,6 +198,12 @@ void BOARD_ADC(void);
 #define BOARD_UART_BOARD_UART0_RX_PIN 1U     /*!<@brief PORTA pin index: 1 */
                                              /* @} */
 
+/*! @name PORTA2 (number 36), UART0_TX
+  @{ */
+#define BOARD_UART_BOARD_UART0_TX_PORT PORTA /*!<@brief PORT device name: PORTA */
+#define BOARD_UART_BOARD_UART0_TX_PIN 2U     /*!<@brief PORTA pin index: 2 */
+                                             /* @} */
+
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
  *

@@ -74,9 +74,12 @@ tError ledParseCommand(const char *cmd)
     termWriteLine("  set [1|0]");
     return EC_SUCCESS;
   }
-  // todo #06.08 implement the command "status"
-  // ...
-  // ...
+  else if (strncmp(cmd, "status", sizeof("status")) == 0){
+	  termWrite("led status: ");
+	  if (ledIsOn()) termWriteLine("1");
+	  else termWriteLine("0");
+      return EC_SUCCESS;
+  }
   else if (strncmp(cmd, "set ", sizeof("set")) == 0)
   {
     cmd += sizeof("set ") - 1;

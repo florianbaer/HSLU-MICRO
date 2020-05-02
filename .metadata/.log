@@ -1,88 +1,23 @@
-!SESSION 2020-05-02 17:19:34.344 -----------------------------------------------
+!SESSION 2020-05-02 18:47:55.189 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=1.8.0_201
 java.vendor=Oracle Corporation
 BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_CH
-Command-line arguments:  -os linux -ws gtk -arch x86_64
+Command-line arguments:  -data /home/hslu/HSLU-MICRO -os linux -ws gtk -arch x86_64
 
-This is a continuation of log file /home/hslu/hslu-micro/.metadata/.bak_1.log
-Created Time: 2020-05-02 17:41:38.218
+This is a continuation of log file /home/hslu/HSLU-MICRO/.metadata/.bak_7.log
+Created Time: 2020-05-02 19:49:30.826
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.218
-!MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.gpio requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.219
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.221
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:38.223
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.224
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:30.826
 !MESSAGE Dependency from Pins:BOARD_BL for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.225
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.827
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.227
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.830
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:38.229
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:30.832
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -138,16 +73,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.230
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:30.834
 !MESSAGE Dependency from Pins:BOARD_BL for platform.drivers.port requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.231
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.837
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.233
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.839
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:38.236
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:30.842
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -203,16 +138,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.236
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:30.843
 !MESSAGE Dependency from Pins:BOARD_ADC for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.237
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.844
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.240
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.846
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:38.242
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:30.855
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -268,16 +203,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.242
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:30.856
 !MESSAGE Dependency from Pins:BOARD_UART for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.244
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.858
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.246
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.860
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:38.249
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:30.861
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -333,16 +268,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.249
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:30.862
 !MESSAGE Dependency from Pins:BOARD_UART for platform.drivers.port requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.251
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.865
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:38.253
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:30.866
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:38.256
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:30.868
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -398,109 +333,19 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:38.256
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:30.869
 !MESSAGE Dependency from Clocks:BOARD_BootClockRUN for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:39.190
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.154
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:54.750
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.461
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:54.753
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.463
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:54.756
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:54.760
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:54.765
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:54.767
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:56.803
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:56.807
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:56.811
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:56.813
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:56.816
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:56.818
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.747
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.748
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.750
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.835
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.843
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.853
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.855
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.858
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.860
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:57.917
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.573
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.575
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.580
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.584
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.586
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.588
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.590
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.592
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.620
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.622
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.632
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.477
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -556,13 +401,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.635
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.488
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.637
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.491
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.639
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.507
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -618,13 +463,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.644
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.509
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.646
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.512
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.648
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.526
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -680,13 +525,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.655
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.529
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.657
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.531
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.659
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.544
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -742,13 +587,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.667
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.556
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.669
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.559
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.671
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.566
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -804,13 +649,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.673
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.577
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.675
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.579
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.679
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.583
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -866,13 +711,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.682
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.594
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.693
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.608
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.696
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.611
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -928,16 +773,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.697
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.611
 !MESSAGE Dependency from Pins:BOARD_LED for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.699
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.624
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.703
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.626
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.706
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.628
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -993,16 +838,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.707
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.629
 !MESSAGE Dependency from Pins:BOARD_LED for platform.drivers.port requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.710
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.630
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.713
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.644
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.717
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.658
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1058,16 +903,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.718
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.659
 !MESSAGE Dependency from Pins:BOARD_LED for platform.drivers.gpio requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.721
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.664
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.724
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.677
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.727
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.689
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1123,16 +968,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.728
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.690
 !MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.731
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.691
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.734
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.706
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.738
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.709
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1188,16 +1033,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.739
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.709
 !MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.port requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.741
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.711
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.745
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.716
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.757
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.720
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1253,16 +1098,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.758
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.721
 !MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.gpio requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.761
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.722
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.764
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.724
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.768
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.727
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1318,16 +1163,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.769
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.727
 !MESSAGE Dependency from Pins:BOARD_BL for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.771
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.729
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.775
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.731
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.784
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.737
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1383,16 +1228,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.785
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.739
 !MESSAGE Dependency from Pins:BOARD_BL for platform.drivers.port requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.787
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.743
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.806
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.747
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.809
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.754
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1448,16 +1293,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.811
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.755
 !MESSAGE Dependency from Pins:BOARD_ADC for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.815
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.757
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.821
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.759
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.824
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.761
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1513,16 +1358,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.825
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.762
 !MESSAGE Dependency from Pins:BOARD_UART for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.828
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.766
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.831
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.772
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.835
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.775
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1578,16 +1423,16 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.836
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.775
 !MESSAGE Dependency from Pins:BOARD_UART for platform.drivers.port requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.838
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.777
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:58.842
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.783
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:41:58.846
+!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 19:49:31.791
 !MESSAGE 
 !STACK 0
 java.lang.NullPointerException
@@ -1643,1384 +1488,269 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
 
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:41:58.847
+!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 19:49:31.791
 !MESSAGE Dependency from Clocks:BOARD_BootClockRUN for platform.drivers.common requires configuration core0 that was not found in the result of query
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:59.077
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.809
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:41:59.127
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.813
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
 
-!ENTRY com.crt.log 4 -1 2020-05-02 17:41:59.134
-!MESSAGE Exception
-!STACK 0
-java.lang.Exception: java.lang.NullPointerException
-	at com.crt.utils.general.Reporter.log(Reporter.java:580)
-	at com.crt.advproject.linker.CreateLinkerScript2.buildLinkerMacros(CreateLinkerScript2.java:623)
-	at com.crt.advproject.linker.CreateLinkerScript2.create(CreateLinkerScript2.java:797)
-	at com.crt.advproject.linker.CreateLinkerScript2.buildScripts(CreateLinkerScript2.java:704)
-	at com.crt.advproject.custom.CRTLinkerScriptGenerator.generateLinkerScript(CRTLinkerScriptGenerator.java:55)
-	at com.crt.advproject.custom.CRTLinkerCmdLineInfo.generateLinkerScript(CRTLinkerCmdLineInfo.java:158)
-	at com.crt.advproject.custom.CRTLinkerCmdLineInfo.massageCmdLine(CRTLinkerCmdLineInfo.java:164)
-	at com.crt.advproject.custom.CRTManagedCmdLineInfo.getCommandLine(CRTManagedCmdLineInfo.java:44)
-	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.addRuleForTool(GnuMakefileGenerator.java:1702)
-	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.addTargetsRules(GnuMakefileGenerator.java:1525)
-	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.addTargets(GnuMakefileGenerator.java:1446)
-	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.populateTopMakefile(GnuMakefileGenerator.java:1164)
-	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.generateMakefiles(GnuMakefileGenerator.java:737)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:997)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:859)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:741)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:511)
-	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:457)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:343)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:470)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:566)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:540)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
-	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2$1.run(AbstractCLaunchDelegate2.java:377)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildProject(AbstractCLaunchDelegate2.java:392)
-	at org.eclipse.cdt.launch.AbstractCLaunchDelegate2.buildForLaunch(AbstractCLaunchDelegate2.java:307)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1020)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1234)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.SDKChipVendorDatabase.getComponents(SDKChipVendorDatabase.java:1905)
-	at com.nxp.mcuxpresso.core.datamodels.SDKChipVendorDatabase.isFreeRTOS(SDKChipVendorDatabase.java:1925)
-	at com.crt.advproject.linker.CreateLinkerScript2.buildLinkerMacros(CreateLinkerScript2.java:619)
-	... 35 more
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.390
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.757
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.769
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.773
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.793
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.800
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.814
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.837
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:00.857
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.205
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.224
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.237
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.240
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.243
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.246
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.249
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.257
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.262
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.264
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.268
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.275
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.279
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.282
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.286
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.291
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.294
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.297
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.300
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.306
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.310
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.311
-!MESSAGE Dependency from Pins:BOARD_LED for platform.drivers.common requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.313
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.316
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.325
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.326
-!MESSAGE Dependency from Pins:BOARD_LED for platform.drivers.port requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.327
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.330
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.338
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.340
-!MESSAGE Dependency from Pins:BOARD_LED for platform.drivers.gpio requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.342
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.345
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.348
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.349
-!MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.common requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.354
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.358
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.361
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.362
-!MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.port requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.363
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.371
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.375
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.377
-!MESSAGE Dependency from Pins:BOARD_JOYSTICK for platform.drivers.gpio requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.381
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.386
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.389
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.390
-!MESSAGE Dependency from Pins:BOARD_BL for platform.drivers.common requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.392
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.399
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.402
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.403
-!MESSAGE Dependency from Pins:BOARD_BL for platform.drivers.port requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.406
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.410
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.416
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.417
-!MESSAGE Dependency from Pins:BOARD_ADC for platform.drivers.common requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.420
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.424
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.427
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.428
-!MESSAGE Dependency from Pins:BOARD_UART for platform.drivers.common requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.445
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.463
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.481
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.493
-!MESSAGE Dependency from Pins:BOARD_UART for platform.drivers.port requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.500
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.523
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.swtools.provider.configuration.dependencies 4 0 2020-05-02 17:42:01.549
-!MESSAGE 
-!STACK 0
-java.lang.NullPointerException
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:725)
-	at com.nxp.mcuxpresso.core.datamodels.providers.SDKComponentsHandler.getComponents(SDKComponentsHandler.java:618)
-	at com.nxp.swtools.mcuxpressoide.adapter.MCUXpressoIDEAdapter.getSdkComponent(MCUXpressoIDEAdapter.java:179)
-	at com.nxp.swtools.sdkproject.ToolchainProjectQuery.query(ToolchainProjectQuery.java:75)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.lambda$0(DependencyQueryFactory.java:80)
-	at java.util.Iterator.forEachRemaining(Iterator.java:116)
-	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
-	at com.nxp.swtools.provider.configuration.dependencies.DependencyQueryFactory$QueryInstanceImpl.query(DependencyQueryFactory.java:73)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:820)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.lambda$3(ValidationEngineImpl.java:86)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
-	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
-	at com.nxp.swtools.validation.engine.internal.ValidationEngineImpl.validate(ValidationEngineImpl.java:86)
-	at com.nxp.swtools.validation.engine.internal.ValidationService.executeValidation(ValidationService.java:127)
-	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.lambda$0(ValidationService.java:212)
-	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper$UIJobWithRunable.runInUIThread(UIJobHelper.java:119)
-	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at com.nxp.mcuxpresso.ide.application.MCUXApplication.start(MCUXApplication.java:42)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
-
-!ENTRY com.nxp.swtools.validation.engine.internal 4 0 2020-05-02 17:42:01.551
-!MESSAGE Dependency from Clocks:BOARD_BootClockRUN for platform.drivers.common requires configuration core0 that was not found in the result of query
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:01.902
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:03.042
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-05-02 17:42:06.840
-!MESSAGE SWO session connected on port 2332->43496 @ 127.0.0.1
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:07.700
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-05-02 17:42:07.866
-!MESSAGE Telnet session connected on port 2333->43586 @ 127.0.0.1
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.798
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.801
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.807
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.810
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.814
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.817
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.831
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.834
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.838
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.840
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.842
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.911
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.919
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.922
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.925
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.927
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.930
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:42:21.933
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.060
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.063
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.067
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.069
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.072
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.074
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.096
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.098
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.105
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.110
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.113
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.115
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:14.819
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.423
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.426
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.430
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.432
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.434
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.436
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.448
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.450
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.455
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.458
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.460
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:15.462
-!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
-
-!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 17:45:20.198
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.817
 !MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.819
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.822
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.824
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.826
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.828
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:31.988
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:32.676
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.697
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.700
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.707
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.709
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.714
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.716
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.725
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.728
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.732
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.735
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.741
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.743
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.752
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.754
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.758
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.760
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.766
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.768
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.812
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.814
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.818
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.820
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.826
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:35.828
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.trace.core 1 0 2020-05-02 19:49:36.096
+!MESSAGE SWO session connected on port 2332->51620 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.217
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.219
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.223
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.224
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.229
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.231
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:36.452
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-05-02 19:49:37.091
+!MESSAGE Telnet session connected on port 2333->51588 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:49:48.023
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.533
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.535
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.541
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.543
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.547
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.549
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.555
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.557
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.561
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.562
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.566
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:38.568
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.083
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.422
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.424
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.430
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.431
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.439
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:39.442
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:40.524
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:40.526
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:40.531
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:40.532
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:40.537
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:40.539
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.242
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.244
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.248
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.249
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.252
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.254
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.265
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.267
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.271
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.272
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.275
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.277
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.587
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.589
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.606
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.614
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.616
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.618
+!MESSAGE Unable to find manifest 'SDK_2.x_MK22FN512xxx12' of project 'Tutorial_08_UART'.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 2 0 2020-05-02 19:50:42.964
+!MESSAGE Unable to find manifest for chip 'MK22FN512xxx12' of project 'Tutorial_08_UART'.
