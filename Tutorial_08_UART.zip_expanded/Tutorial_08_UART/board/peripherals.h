@@ -38,10 +38,6 @@ extern "C" {
 #define GPIOB_IRQN PORTB_IRQn
 /* GPIOB interrupt handler identifier. */
 #define GPIOB_IRQHANDLER PORTB_IRQHandler
-/* Definition of peripheral ID */
-#define UART0_2_PERIPHERAL UART0
-/* Definition of the clock source frequency */
-#define UART0_2_CLOCK_SOURCE CLOCK_GetFreq(UART0_CLK_SRC)
 
 /* Definitions for BOARD_InitUart0 functional group */
 /* Definition of peripheral ID */
@@ -68,7 +64,6 @@ extern adc16_channel_config_t ADC1_channelsConfig[3];
 extern const adc16_config_t ADC1_config;
 extern const adc16_channel_mux_mode_t ADC1_muxMode;
 extern const adc16_hardware_average_mode_t ADC1_hardwareAverageMode;
-extern const uart_config_t UART0_2_config;
 extern const uart_config_t UART0_config;
 
 /***********************************************************************************************************************

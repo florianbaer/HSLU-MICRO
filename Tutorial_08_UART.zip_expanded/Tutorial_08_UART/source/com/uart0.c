@@ -35,7 +35,6 @@ static uint16_t txBufReadPos = 0;
 #define ENABLE_UART0_INTERRUPTS()     NVIC_EnableIRQ(UART0_RX_TX_IRQn)
 #define DISABLE_UART0_INTERRUPTS()    NVIC_DisableIRQEx(UART0_RX_TX_IRQn)
 
-
 /**
  * @brief UART Interrupt Service Routine
  * - Received bytes are stored in the queue rxBuf
@@ -47,14 +46,17 @@ void UART0_RX_TX_IRQHandler(void)
   uint8_t status = UART0->S1;
   uint8_t data = UART0->D;
 
-  // but only if the queue isn't full!
   if (status & UART_S1_RDRF_MASK)
   {
-	  if(rxBufCount < UART0_RX_BUF_SIZE){
+    // todo #06.05 (MC-Car) store the received byte into receiver Queue (rxBuf)
+    // but only if the queue isn't full!
+	if (rxBufCount < UART0_RX_BUF_SIZE)
+	{
 		rxBuf[rxBufWritePos++] = data;
 		rxBufCount++;
-		if(rxBufWritePos == UART0_RX_BUF_SIZE) rxBufWritePos = 0;
-	  }
+		if (rxBufWritePos == UART0_RX_BUF_SIZE) rxBufWritePos = 0;
+	}
+
   }
 
   if (status & UART_S1_TDRE_MASK)
@@ -82,6 +84,7 @@ void UART0_ERR_IRQHandler(void)
   (void)UART0->S1;
   (void)UART0->D;
 }
+
 /**
  * Writes one Byte in the transmit buffer.
  *
@@ -280,26 +283,22 @@ void uart0Init(uint16_t baudrate)
   rxBufReadPos = rxBufWritePos = rxBufCount = 0;
 
   // todo #06.01 (MC-Car) configure clock gating (Kinetis Reference Manual p277) KRM277
-  SIM->SCGC4 |= SIM_SCGC4_UART0_MASK;
+   SIM->SCGC4 |= SIM_SCGC4_UART0_MASK;
+   // todo #06.02 (MC-Car) configure port multiplexing, enable Pull-Ups and enable OpenDrain (ODE)!
+   // OpenDrain is needed to ensure that no current flows from Target-uC to the Debugger-uC
+   PORTA->PCR[1] = PORT_PCR_MUX(2) | PORT_PCR_PE(1) | PORT_PCR_PS(1) | PORT_PCR_ODE_MASK;
+   PORTA->PCR[2] = PORT_PCR_MUX(2) | PORT_PCR_PE(1) | PORT_PCR_PS(1) | PORT_PCR_ODE_MASK;
+   // todo #06.03 (MC-Car) set the baudrate into the BDH (first) and BDL (second) register. KRM1215ff
+   uint32_t bd = (CLOCK_GetCoreSysClkFreq() / (16 * baudrate));
+   UART0->BDH = (bd >> 8) & 0x1F;
+   UART0->BDL = bd & 0xFF;
+   // todo #06.04 (MC-Car) enable uart receiver, receiver interrupt and transmitter as well as
+   // enable and set the rx/tx interrupt in the nested vector interrupt controller (NVIC)
+   UART0->C2 = UART_C2_RIE_MASK | UART_C2_RE_MASK | UART_C2_TE_MASK;
+   NVIC_SetPriority(UART0_RX_TX_IRQn, PRIO_UART0);
+   NVIC_EnableIRQ(UART0_RX_TX_IRQn);
 
-  // todo #06.02 (MC-Car) configure port multiplexing, enable Pull-Ups and enable OpenDrain (ODE)!
-  // OpenDrain is needed to ensure that no current flows from Target-uC to the Debugger-uC
-  PORTA->PCR[1] = PORT_PCR_MUX(2) |PORT_PCR_PE(1)|PORT_PCR_PS(1)|PORT_PCR_ODE_MASK;
-  PORTA->PCR[2] = PORT_PCR_MUX(2) |PORT_PCR_PE(1)|PORT_PCR_PS(1)|PORT_PCR_ODE_MASK;
-
-  // todo #06.03 (MC-Car) set the baudrate into the BDH (first) and BDL (second) register. KRM1215ff
-
-  uint32_t bd = (CLOCK_GetBusClkFreq() / (16*baudrate));
-  UART0->BDH = (bd >> 8) & 0x1F;
-  UART0->BDL = bd && 0xFF;
-
-
-  // todo #06.04 (MC-Car) enable uart receiver, receiver interrupt and transmitter as well as
-  // enable and set the rx/tx interrupt in the nested vector interrupt controller (NVIC)
-  UART0 ->C2 = UART_C2_RIE_MASK | UART_C2_RE_MASK | UART_C2_TE_MASK;
-  NVIC_SetPriority(UART0_SERIAL_RX_TX_IRQN, PRIO_UART0);
-  NVIC_EnableIRQ(UART0_RX_TX_IRQn);
-
+  // enable the error interrupts of the uart and configure the NVIC
   UART0->C3 = UART_C3_ORIE_MASK | UART_C3_NEIE_MASK | UART_C3_FEIE_MASK;
   NVIC_SetPriority(UART0_ERR_IRQn, PRIO_UART0);
   NVIC_EnableIRQ(UART0_ERR_IRQn);

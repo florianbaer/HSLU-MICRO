@@ -428,21 +428,6 @@
                         <data type="Boolean">true</data>
                      </feature>
                   </dependency>
-                  <dependency resourceType="ClockOutput" resourceId="System_clock" description="System clock is inactive. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="frequency" evaluation="greaterThan">
-                        <data type="Frequency" unit="Hz">0</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="UART0.uart_tx" description="Signal TX of the peripheral UART0 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="routed" evaluation="equal">
-                        <data type="Boolean">true</data>
-                     </feature>
-                  </dependency>
-                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="UART0.uart_rx" description="Signal RX of the peripheral UART0 is not routed. Problem must be resolved in another tool." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
-                     <feature name="routed" evaluation="equal">
-                        <data type="Boolean">true</data>
-                     </feature>
-                  </dependency>
                </dependencies>
                <instances>
                   <instance name="ADC1" uuid="a6ffdf74-36ac-4bab-9d85-0fb6936bb706" type="adc16" type_id="adc16_7d827be2dc433dc756d94a7ce88cbcc5" mode="ADC" peripheral="ADC1" enabled="true" comment="" custom_name_enabled="false">
@@ -510,21 +495,6 @@
                         </struct>
                      </config_set>
                   </instance>
-                  <instance name="UART0_2" uuid="57cad55e-251b-447a-8e0b-b4c92462e003" type="uart" type_id="uart_88ab1eca0cddb7ee407685775de016d5" mode="polling" peripheral="UART0" enabled="true" comment="" custom_name_enabled="false">
-                     <config_set name="uartConfig_t" quick_selection="QuickSelection1">
-                        <struct name="uartConfig">
-                           <setting name="clockSource" value="BusInterfaceClock"/>
-                           <setting name="clockSourceFreq" value="GetFreq"/>
-                           <setting name="baudRate_Bps" value="115200"/>
-                           <setting name="parityMode" value="kUART_ParityDisabled"/>
-                           <setting name="txFifoWatermark" value="0"/>
-                           <setting name="rxFifoWatermark" value="1"/>
-                           <setting name="idleType" value="kUART_IdleTypeStartBit"/>
-                           <setting name="enableTx" value="true"/>
-                           <setting name="enableRx" value="true"/>
-                        </struct>
-                     </config_set>
-                  </instance>
                </instances>
             </functional_group>
             <functional_group name="BOARD_InitUart0" uuid="8e291512-5625-40ff-9042-71ec3e0c4495" called_from_default_init="false" id_prefix="" core="core0">
@@ -549,7 +519,7 @@
                </dependencies>
                <instances>
                   <instance name="UART0" uuid="5e3fd5b0-6d2c-47da-8fcc-a88edc8cd6e7" type="uart" type_id="uart_88ab1eca0cddb7ee407685775de016d5" mode="interrupts" peripheral="UART0" enabled="true" comment="" custom_name_enabled="false">
-                     <config_set name="uartConfig_t" quick_selection="QuickSelection4">
+                     <config_set name="uartConfig_t">
                         <struct name="uartConfig">
                            <setting name="clockSource" value="BusInterfaceClock"/>
                            <setting name="clockSourceFreq" value="GetFreq"/>
@@ -565,11 +535,16 @@
                      <config_set name="interruptsCfg">
                         <set name="interrupts">
                            <selected>
+                              <id>kUART_TxDataRegEmptyInterruptEnable</id>
+                              <id>kUART_TransmissionCompleteInterruptEnable</id>
                               <id>kUART_RxDataRegFullInterruptEnable</id>
                               <id>kUART_RxOverrunInterruptEnable</id>
                               <id>kUART_NoiseErrorInterruptEnable</id>
                               <id>kUART_FramingErrorInterruptEnable</id>
+                              <id>kUART_ParityErrorInterruptEnable</id>
                               <id>kUART_RxFifoOverflowInterruptEnable</id>
+                              <id>kUART_TxFifoOverflowInterruptEnable</id>
+                              <id>kUART_RxFifoUnderflowInterruptEnable</id>
                            </selected>
                         </set>
                         <struct name="interrupt_vectors">
@@ -597,7 +572,7 @@
             <component name="system" uuid="eecb93b7-e21b-43dc-85a7-36a3269a4c36" type_id="system_54b53072540eeeb8f8e9343e71f28176">
                <config_set_global name="global_system_definitions"/>
             </component>
-            <component name="msg" uuid="90cf3fdd-b79e-436b-a2b2-d8ba357415ef" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+            <component name="msg" uuid="d834dae3-8c24-47cf-83cf-f07d8a9c2c02" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
                <config_set_global name="global_messages"/>
             </component>
          </components>

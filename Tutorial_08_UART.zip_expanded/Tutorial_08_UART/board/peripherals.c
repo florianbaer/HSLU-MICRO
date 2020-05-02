@@ -179,48 +179,6 @@ void GPIOB_init(void) {
 }
 
 /***********************************************************************************************************************
- * UART0_2 initialization code
- **********************************************************************************************************************/
-/* clang-format off */
-/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-instance:
-- name: 'UART0_2'
-- type: 'uart'
-- mode: 'polling'
-- custom_name_enabled: 'false'
-- type_id: 'uart_88ab1eca0cddb7ee407685775de016d5'
-- functional_group: 'BOARD_InitPeripherals'
-- peripheral: 'UART0'
-- config_sets:
-  - uartConfig_t:
-    - uartConfig:
-      - clockSource: 'BusInterfaceClock'
-      - clockSourceFreq: 'GetFreq'
-      - baudRate_Bps: '115200'
-      - parityMode: 'kUART_ParityDisabled'
-      - txFifoWatermark: '0'
-      - rxFifoWatermark: '1'
-      - idleType: 'kUART_IdleTypeStartBit'
-      - enableTx: 'true'
-      - enableRx: 'true'
-    - quick_selection: 'QuickSelection1'
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
-/* clang-format on */
-const uart_config_t UART0_2_config = {
-  .baudRate_Bps = 115200,
-  .parityMode = kUART_ParityDisabled,
-  .txFifoWatermark = 0,
-  .rxFifoWatermark = 1,
-  .idleType = kUART_IdleTypeStartBit,
-  .enableTx = true,
-  .enableRx = true
-};
-
-void UART0_2_init(void) {
-  UART_Init(UART0_2_PERIPHERAL, &UART0_2_config, UART0_2_CLOCK_SOURCE);
-}
-
-/***********************************************************************************************************************
  * BOARD_InitUart0 functional group
  **********************************************************************************************************************/
 /***********************************************************************************************************************
@@ -248,9 +206,10 @@ instance:
       - idleType: 'kUART_IdleTypeStartBit'
       - enableTx: 'true'
       - enableRx: 'true'
-    - quick_selection: 'QuickSelection4'
   - interruptsCfg:
-    - interrupts: 'kUART_RxDataRegFullInterruptEnable kUART_RxOverrunInterruptEnable kUART_NoiseErrorInterruptEnable kUART_FramingErrorInterruptEnable kUART_RxFifoOverflowInterruptEnable'
+    - interrupts: 'kUART_TxDataRegEmptyInterruptEnable kUART_TransmissionCompleteInterruptEnable kUART_RxDataRegFullInterruptEnable kUART_RxOverrunInterruptEnable
+      kUART_NoiseErrorInterruptEnable kUART_FramingErrorInterruptEnable kUART_ParityErrorInterruptEnable kUART_RxFifoOverflowInterruptEnable kUART_TxFifoOverflowInterruptEnable
+      kUART_RxFifoUnderflowInterruptEnable'
     - interrupt_vectors:
       - enable_rx_tx_irq: 'true'
       - interrupt_rx_tx:
@@ -278,7 +237,7 @@ const uart_config_t UART0_config = {
 
 void UART0_init(void) {
   UART_Init(UART0_PERIPHERAL, &UART0_config, UART0_CLOCK_SOURCE);
-  UART_EnableInterrupts(UART0_PERIPHERAL, kUART_RxDataRegFullInterruptEnable | kUART_RxOverrunInterruptEnable | kUART_NoiseErrorInterruptEnable | kUART_FramingErrorInterruptEnable | kUART_RxFifoOverflowInterruptEnable);
+  UART_EnableInterrupts(UART0_PERIPHERAL, kUART_TxDataRegEmptyInterruptEnable | kUART_TransmissionCompleteInterruptEnable | kUART_RxDataRegFullInterruptEnable | kUART_RxOverrunInterruptEnable | kUART_NoiseErrorInterruptEnable | kUART_FramingErrorInterruptEnable | kUART_ParityErrorInterruptEnable | kUART_RxFifoOverflowInterruptEnable | kUART_TxFifoOverflowInterruptEnable | kUART_RxFifoUnderflowInterruptEnable);
   /* Interrupt vector UART0_RX_TX_IRQn priority settings in the NVIC */
   NVIC_SetPriority(UART0_SERIAL_RX_TX_IRQN, UART0_SERIAL_RX_TX_IRQ_PRIORITY);
   /* Enable interrupt UART0_RX_TX_IRQn request in the NVIC */
@@ -297,7 +256,6 @@ void BOARD_InitPeripherals(void)
   /* Initialize components */
   ADC1_init();
   GPIOB_init();
-  UART0_2_init();
 }
 
 void BOARD_InitUart0(void)

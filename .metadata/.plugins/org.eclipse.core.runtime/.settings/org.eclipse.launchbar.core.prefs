@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SW09 JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Testat1 JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Tutorial_08_UART JLink Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SW09 JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Testat1 JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Tutorial_08_UART JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Tutorial_08_UART JLink Debug (1)
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SW09\ JLink\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SW09\ JLink\ Debug/activeLaunchTarget=null\:---
