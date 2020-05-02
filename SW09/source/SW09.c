@@ -114,7 +114,7 @@ static void app_print_counter_task(void *pv) {
 	for (;;) {
 		//printf("works here");
 		vTaskDelay(pdMS_TO_TICKS(5000));
-		ADC1->SC1[0] = BOARD_; // Temperature
+		ADC1->SC1[0] = ADC_CH_POWER; // Temperature
 		// wait until conversion has been finished
 		while (!(ADC1->SC1[0] & ADC_SC1_COCO_MASK)) {
 		}
