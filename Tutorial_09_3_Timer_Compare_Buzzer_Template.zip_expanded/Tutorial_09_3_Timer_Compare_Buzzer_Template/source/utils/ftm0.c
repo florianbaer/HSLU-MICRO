@@ -62,9 +62,13 @@ void FTM0_IRQHandler(void)
 void ftm0_init(void)
 {
   // todo #9.3-01 set clockgating for FTM0
+	SIM->SCGC6 |= SIM_SCGC6_FTM0(1);
 
   // todo #9.3-02 configure the timer with "Fixed frequency clock" as clocksource and with a "Prescaler" of 1 => 250 kHz
+	FTM0->SC = FTM_SC_CLKS(2) | FTM_SC_PS(0);
 
   // todo #9.3-03 Enable FTM0 interrupt on NVIC with Prio: PRIO_FTM0 (defined in platform.h)
+	NVIC_SetPriority(FTM0_IRQn, 8);
+	NVIC_EnableIRQ(FTM0_IRQn);
 }
 #endif

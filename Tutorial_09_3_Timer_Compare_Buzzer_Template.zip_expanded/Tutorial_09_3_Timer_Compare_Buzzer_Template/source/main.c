@@ -44,7 +44,13 @@ int main(void) {
     sound_player_init();
 
     // first beep
-    sound_beep(4000, 100);
+    sound_beep(440, 500);
+    sound_beep(440, 500);
+    sound_beep(440, 500);
+    sound_beep(349, 350);
+    sound_beep(523, 150);
+    sound_beep(440, 500);
+    sound_beep(349, 350);
 
     // print over UART and JTag
     utils_print_tutorial(TUTORIAL_TITLE);

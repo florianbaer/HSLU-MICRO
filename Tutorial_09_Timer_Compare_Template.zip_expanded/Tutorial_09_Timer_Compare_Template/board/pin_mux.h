@@ -53,13 +53,6 @@ void BOARD_InitBootPins(void);
 #define BOARD_LED_RED_R_L_BREAK_PIN 20U    /*!<@brief PORTB pin index: 20 */
                                            /* @} */
 
-/*! @name PORTC8 (number 80), GREEN_F_L
-  @{ */
-#define BOARD_LED_GREEN_F_L_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
-#define BOARD_LED_GREEN_F_L_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_LED_GREEN_F_L_PIN 8U     /*!<@brief PORTC pin index: 8 */
-                                       /* @} */
-
 /*! @name PORTC9 (number 81), RED_F_L
   @{ */
 #define BOARD_LED_RED_F_L_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
@@ -94,6 +87,12 @@ void BOARD_InitBootPins(void);
 #define BOARD_LED_BLUE_F_R_PORT PORTD /*!<@brief PORT device name: PORTD */
 #define BOARD_LED_BLUE_F_R_PIN 3U     /*!<@brief PORTD pin index: 3 */
                                       /* @} */
+
+/*! @name PORTC8 (number 80), GREEN_F_L
+  @{ */
+#define BOARD_LED_GREEN_F_L_PORT PORTC /*!<@brief PORT device name: PORTC */
+#define BOARD_LED_GREEN_F_L_PIN 8U     /*!<@brief PORTC pin index: 8 */
+                                       /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.

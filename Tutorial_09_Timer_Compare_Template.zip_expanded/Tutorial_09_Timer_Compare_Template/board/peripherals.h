@@ -13,8 +13,9 @@
 #include "fsl_adc16.h"
 #include "fsl_gpio.h"
 #include "fsl_port.h"
-#include "fsl_uart.h"
 #include "fsl_clock.h"
+#include "fsl_ftm.h"
+#include "fsl_uart.h"
 
 #if defined(__cplusplus)
 extern "C" {
@@ -38,6 +39,18 @@ extern "C" {
 #define GPIOB_IRQN PORTB_IRQn
 /* GPIOB interrupt handler identifier. */
 #define GPIOB_IRQHANDLER PORTB_IRQHandler
+/* Definition of peripheral ID */
+#define FTM3_PERIPHERAL FTM3
+/* Definition of the clock source frequency */
+#define FTM3_CLOCK_SOURCE 250000UL
+/* FTM3 interrupt vector ID (number). */
+#define FTM3_IRQN FTM3_IRQn
+/* FTM3 interrupt handler identifier. */
+#define FTM3_IRQHANDLER FTM3_IRQHandler
+/* Definition of peripheral ID */
+#define UART0_2_PERIPHERAL UART0
+/* Definition of the clock source frequency */
+#define UART0_2_CLOCK_SOURCE CLOCK_GetFreq(UART0_CLK_SRC)
 
 /* Definitions for BOARD_InitUart0 functional group */
 /* Definition of peripheral ID */
@@ -64,6 +77,8 @@ extern adc16_channel_config_t ADC1_channelsConfig[3];
 extern const adc16_config_t ADC1_config;
 extern const adc16_channel_mux_mode_t ADC1_muxMode;
 extern const adc16_hardware_average_mode_t ADC1_hardwareAverageMode;
+extern const ftm_config_t FTM3_config;
+extern const uart_config_t UART0_2_config;
 extern const uart_config_t UART0_config;
 
 /***********************************************************************************************************************

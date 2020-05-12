@@ -179,6 +179,114 @@ void GPIOB_init(void) {
 }
 
 /***********************************************************************************************************************
+ * FTM3 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'FTM3'
+- type: 'ftm'
+- mode: 'EdgeAligned'
+- custom_name_enabled: 'false'
+- type_id: 'ftm_04a15ae4af2b404bf2ae403c3dbe98b3'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'FTM3'
+- config_sets:
+  - ftm_main_config:
+    - ftm_config:
+      - clockSource: 'kFTM_FixedClock'
+      - clockSourceFreq: 'BOARD_BootClockRUN'
+      - prescale: 'kFTM_Prescale_Divide_8'
+      - timerFrequency: '2'
+      - bdmMode: 'kFTM_BdmMode_0'
+      - pwmSyncMode: 'kFTM_SoftwareTrigger'
+      - reloadPoints: ''
+      - faultMode: 'kFTM_Fault_Disable'
+      - faultFilterValue: '0'
+      - deadTimePrescale: 'kFTM_Deadtime_Prescale_1'
+      - deadTimeValue: '0'
+      - extTriggers: ''
+      - chnlInitState: ''
+      - chnlPolarity: ''
+      - useGlobalTimeBase: 'false'
+    - timer_interrupts: ''
+    - enable_irq: 'true'
+    - ftm_interrupt:
+      - IRQn: 'FTM3_IRQn'
+      - enable_priority: 'false'
+      - priority: '0'
+      - enable_custom_name: 'false'
+    - EnableTimerInInit: 'true'
+  - ftm_edge_aligned_mode:
+    - ftm_edge_aligned_channels_config: []
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const ftm_config_t FTM3_config = {
+  .prescale = kFTM_Prescale_Divide_8,
+  .bdmMode = kFTM_BdmMode_0,
+  .pwmSyncMode = kFTM_SoftwareTrigger,
+  .reloadPoints = 0,
+  .faultMode = kFTM_Fault_Disable,
+  .faultFilterValue = 0,
+  .deadTimePrescale = kFTM_Deadtime_Prescale_1,
+  .deadTimeValue = 0,
+  .extTriggers = 0,
+  .chnlInitState = 0,
+  .chnlPolarity = 0,
+  .useGlobalTimeBase = false
+};
+
+void FTM3_init(void) {
+  FTM_Init(FTM3_PERIPHERAL, &FTM3_config);
+  FTM_SetTimerPeriod(FTM3_PERIPHERAL, ((FTM3_CLOCK_SOURCE/ (1U << (FTM3_PERIPHERAL->SC & FTM_SC_PS_MASK))) / 2) + 1);
+  /* Enable interrupt FTM3_IRQn request in the NVIC */
+  EnableIRQ(FTM3_IRQN);
+  FTM_StartTimer(FTM3_PERIPHERAL, kFTM_FixedClock);
+}
+
+/***********************************************************************************************************************
+ * UART0_2 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'UART0_2'
+- type: 'uart'
+- mode: 'polling'
+- custom_name_enabled: 'false'
+- type_id: 'uart_88ab1eca0cddb7ee407685775de016d5'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'UART0'
+- config_sets:
+  - uartConfig_t:
+    - uartConfig:
+      - clockSource: 'BusInterfaceClock'
+      - clockSourceFreq: 'GetFreq'
+      - baudRate_Bps: '115200'
+      - parityMode: 'kUART_ParityDisabled'
+      - txFifoWatermark: '0'
+      - rxFifoWatermark: '1'
+      - idleType: 'kUART_IdleTypeStartBit'
+      - enableTx: 'true'
+      - enableRx: 'true'
+    - quick_selection: 'QuickSelection1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const uart_config_t UART0_2_config = {
+  .baudRate_Bps = 115200,
+  .parityMode = kUART_ParityDisabled,
+  .txFifoWatermark = 0,
+  .rxFifoWatermark = 1,
+  .idleType = kUART_IdleTypeStartBit,
+  .enableTx = true,
+  .enableRx = true
+};
+
+void UART0_2_init(void) {
+  UART_Init(UART0_2_PERIPHERAL, &UART0_2_config, UART0_2_CLOCK_SOURCE);
+}
+
+/***********************************************************************************************************************
  * BOARD_InitUart0 functional group
  **********************************************************************************************************************/
 /***********************************************************************************************************************
@@ -254,6 +362,8 @@ void BOARD_InitPeripherals(void)
   /* Initialize components */
   ADC1_init();
   GPIOB_init();
+  FTM3_init();
+  UART0_2_init();
 }
 
 void BOARD_InitUart0(void)

@@ -62,14 +62,17 @@ void FTM0CH0_IRQHandler(void)
   {
     // tmrPlayTimeTicky is lower as tmrFrequencyTicks (tmrPlayTimeTicky < tmrFrequencyTicks)
     // todo #9.3-09 => disable the whole timer channel 0 of FTM0
-
+	  FTM0->CONTROLS[0].CnSC = 0;
     // todo #9.3-10 invoke the soundFinishedCallback function if the functionpointer isn't null!
+	  if(soundFinishedCallback) soundFinishedCallback();
   }
 
   // todo #9.3-11 clear the channel 0 flag
+  FTM0->CONTROLS[0].CnSC &= ~FTM_CnSC_CHF(1);
 
   // todo #9.3-12 set next compare time (value is stored in tmrFrequencyTicks)
   // => add tmrFrequencyTicks to the channel 0 value and store the result in the channel 0 value register
+  FTM0->CONTROLS[0].CnV += tmrFrequencyTicks;
 
   OnExitSoundISR();
 }
@@ -96,11 +99,11 @@ void sound_beep(uint16_t frequency, uint16_t timeMS)
     // todo #9.3-05 calculate the number of ticks needed to generate the desired frequency.
     // Note that you have to toggle the pin twice per period!
     // tmrFrequencyTicks = FTM0_CLOCK / (2 * frequency);
-    //tmrFrequencyTicks = ...
+    tmrFrequencyTicks = ((10 * FTM0_CLOCK) / (2 * frequency) + 5) / 10;
 
     // todo #9.3-06 configure the channel status and control register as follows:
     // mode: output compare with "toggle on compare". Enable the channel interrupt
-    //FTM0->CONTROLS[0].CnSC = ...
+    FTM0->CONTROLS[0].CnSC = FTM_CnSC_MSx(1) | FTM_CnSC_ELSx(1) | FTM_CnSC_CHIE(1);
   }
   else // frequency == 0 => generate pause
   {
@@ -109,11 +112,12 @@ void sound_beep(uint16_t frequency, uint16_t timeMS)
 
     // todo #9.3-07 configure the channel status and control register as follows:
     // mode: output compare with "clear on compare". Enable the channel interrupt
-    //FTM0->CONTROLS[0].CnSC = ...
+    FTM0->CONTROLS[0].CnSC = FTM_CnSC_MSx(1) | FTM_CnSC_ELSx(2) | FTM_CnSC_CHIE(1);
   }
 
   // todo #9.3-08 add to the current timer counter register the value of tmrFrequencyTicks calculated above and
   // store the result into the channel value register.
+  FTM0->CONTROLS[0].CnV = FTM0->CNT + tmrFrequencyTicks;
 }
 
 
@@ -157,7 +161,7 @@ tError soundParseCommand(const char *cmd)
 void sound_init(void)
 {
   // todo #9.3-04 configure port muxing of PTC1 to FTM3_CH0!
-
+	PORTC->PCR[1] = PORT_PCR_MUX(4);
   // register terminal command line handler
   term_register_command_line_handler(&clh, "snd", "(sound)", soundParseCommand);
 }

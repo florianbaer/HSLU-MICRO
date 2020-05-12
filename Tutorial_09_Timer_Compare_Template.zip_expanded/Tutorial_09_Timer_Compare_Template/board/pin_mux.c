@@ -73,8 +73,6 @@ BOARD_LED:
   - {pin_num: '47', peripheral: GPIOA, signal: 'GPIO, 17', pin_signal: ADC1_SE17/PTA17/SPI0_SIN/UART0_RTS_b/I2S0_MCLK, direction: OUTPUT, gpio_init_state: 'true',
     slew_rate: fast, open_drain: disable}
   - {pin_num: '66', peripheral: GPIOB, signal: 'GPIO, 20', pin_signal: PTB20/FB_AD31/CMP0_OUT, direction: OUTPUT, gpio_init_state: 'true', slew_rate: fast, open_drain: disable}
-  - {pin_num: '80', peripheral: GPIOC, signal: 'GPIO, 8', pin_signal: ADC1_SE4b/CMP0_IN2/PTC8/FTM3_CH4/I2S0_MCLK/FB_AD7, direction: OUTPUT, gpio_init_state: 'true',
-    slew_rate: fast, open_drain: disable}
   - {pin_num: '81', peripheral: GPIOC, signal: 'GPIO, 9', pin_signal: ADC1_SE5b/CMP0_IN3/PTC9/FTM3_CH5/I2S0_RX_BCLK/FB_AD6/FTM2_FLT0, direction: OUTPUT, gpio_init_state: 'true',
     slew_rate: fast, open_drain: disable}
   - {pin_num: '82', peripheral: GPIOC, signal: 'GPIO, 10', pin_signal: ADC1_SE6b/PTC10/I2C1_SCL/FTM3_CH6/I2S0_RX_FS/FB_AD5, direction: OUTPUT, gpio_init_state: 'true',
@@ -85,6 +83,7 @@ BOARD_LED:
     slew_rate: fast, open_drain: disable}
   - {pin_num: '96', peripheral: GPIOD, signal: 'GPIO, 3', pin_signal: PTD3/SPI0_SIN/UART2_TX/FTM3_CH3/FB_AD3/LPUART0_TX/I2C0_SDA, direction: OUTPUT, gpio_init_state: 'true',
     slew_rate: fast, open_drain: disable}
+  - {pin_num: '80', peripheral: FTM3, signal: 'CH, 4', pin_signal: ADC1_SE4b/CMP0_IN2/PTC8/FTM3_CH4/I2S0_MCLK/FB_AD7, direction: OUTPUT}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -133,13 +132,6 @@ void BOARD_LED(void)
     };
     /* Initialize GPIO functionality on pin PTB20 (pin 66)  */
     GPIO_PinInit(BOARD_LED_RED_R_L_BREAK_GPIO, BOARD_LED_RED_R_L_BREAK_PIN, &RED_R_L_BREAK_config);
-
-    gpio_pin_config_t GREEN_F_L_config = {
-        .pinDirection = kGPIO_DigitalOutput,
-        .outputLogic = 1U
-    };
-    /* Initialize GPIO functionality on pin PTC8 (pin 80)  */
-    GPIO_PinInit(BOARD_LED_GREEN_F_L_GPIO, BOARD_LED_GREEN_F_L_PIN, &GREEN_F_L_config);
 
     gpio_pin_config_t RED_F_L_config = {
         .pinDirection = kGPIO_DigitalOutput,
@@ -260,19 +252,8 @@ void BOARD_LED(void)
                       /* Open Drain Enable: Open drain output is disabled on the corresponding pin. */
                       | PORT_PCR_ODE(kPORT_OpenDrainDisable));
 
-    /* PORTC8 (pin 80) is configured as PTC8 */
-    PORT_SetPinMux(BOARD_LED_GREEN_F_L_PORT, BOARD_LED_GREEN_F_L_PIN, kPORT_MuxAsGpio);
-
-    PORTC->PCR[8] = ((PORTC->PCR[8] &
-                      /* Mask bits to zero which are setting */
-                      (~(PORT_PCR_SRE_MASK | PORT_PCR_ODE_MASK | PORT_PCR_ISF_MASK)))
-
-                     /* Slew Rate Enable: Fast slew rate is configured on the corresponding pin, if the pin is
-                      * configured as a digital output. */
-                     | PORT_PCR_SRE(kPORT_FastSlewRate)
-
-                     /* Open Drain Enable: Open drain output is disabled on the corresponding pin. */
-                     | PORT_PCR_ODE(kPORT_OpenDrainDisable));
+    /* PORTC8 (pin 80) is configured as FTM3_CH4 */
+    PORT_SetPinMux(BOARD_LED_GREEN_F_L_PORT, BOARD_LED_GREEN_F_L_PIN, kPORT_MuxAlt3);
 
     /* PORTC9 (pin 81) is configured as PTC9 */
     PORT_SetPinMux(BOARD_LED_RED_F_L_PORT, BOARD_LED_RED_F_L_PIN, kPORT_MuxAsGpio);

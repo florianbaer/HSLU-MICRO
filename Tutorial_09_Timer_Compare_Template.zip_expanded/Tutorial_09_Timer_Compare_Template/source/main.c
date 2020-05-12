@@ -77,3 +77,13 @@ int main(void) {
     }
     return 0;
 }
+
+#define TICKS_500MS	(15624) // = 250'000 / (2**8 - 1)
+
+/* FTM3_IRQn interrupt handler */
+void FTM3_IRQHANDLER(void) {
+  FTM3->CONTROLS[4].CnSC &= ~FTM_CnSC_CHF_MASK;
+  FTM3->CONTROLS[4].CnV += TICKS_500MS;
+  /*  Place your code here */
+}
+
